@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Markets with Asymmetric Information</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="\index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="\index.html">Home</a></li>
+						<li><a href="index.html">Contracts and Information</a></li>
+						<li><a href="#">Instituition economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Markets with Asymmetric Information</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>Consider a simple model with some consumers and some sellers trade for a good. Each consumer can at most purchase 1 unit. Then, we denote the consumer's preference as follows: <br>
+										$$U=\begin{cases}\theta s-p, \text{ if buys a good with quality } s \text{ at price } p \\ 0, \text{ if no trade} \end{cases}$$</p>
+									<p>\(\theta>0\) is a 'taste' parameter: how much he cares about the quality. Note also that \(s\in \mathbb{R_+} \). We can then instantly notice that the marginal utility from extra quality is increasing with \(\theta\).</p>
+									<p>Intuitively, \(s\) is seller's private information, while \(\theta\) is buyer's private information. For now, we focus on \(s\), i.e. buyer cannot observe the quality. </p>
+									<header>
+										<h2>The Lemons Problem</h2>
+									</header>	
+									<p>Assume now there are only two agents. Agent 1 (referred as A1) is the seller who owns a car at quality \(s\). Agent 2 (referred as A2) is a potential buyer of the car, and he cannot observe \(s\). Moreover, we use \(\theta_i\) to denote agent \(i\)'s type, where \(i\in\{1,2\}\).</p>
+									<p>Then we can write down agents' preferences:
+										$$\text{A1:} \begin{cases} \theta_1s, \text{ keep the car} \\ p, \text{ sell the car} \end{cases}$$
+										$$\text{A2:} \begin{cases} 0, \text{ not buying} \\ \theta_2s-p, \text{ buy the car} \end{cases}$$
+									</p>
+									<p>A2 only knows the distribution of \(s\). In this example, we assume that \(s\) is distributed uniformly on \([0,\bar{s}]\).</p>
+									<header>
+										<h3>Benchmark (First Best)</h3>
+									</header>
+									<p>For all given \(s\), trade is efficient iff \(\theta_1<\theta_2\), i.e. The buyer's valuation is higher than the seller's valuation. Suppose there is no asymmetric information. Since \(s\) is now observable for both parties, we have trade when:
+										$$ \theta_1s < p \text{ and } \theta_2s-p>0 $$
+										$$ \Leftrightarrow \theta_1s < p < \theta_2s $$
+										For all \(s \neq 0\), trade occurs efficiently.
+									</p>
+									<header>
+										<h3>Private Quality (Second Best)</h3>
+									</header>
+									<p>Buyer form expectation on \(s\) given the fact that seller is willing to sell the car: 
+										$$ \theta_1s \leq p \Leftrightarrow s \leq \frac{p}{\theta_1}$$
+									</p>
+									<p>So, by uniform distribution, the buyer's expectation on \(s\) is:
+										$$ \mathbb{E}\left[s|s\leq \frac{p}{\theta_1}\right]=\frac{p}{2\theta_1}  $$
+									</p>
+									<p>Then, we can make a comparison and find out:
+										$$p<\theta_1\bar{s} \Leftrightarrow \frac{p}{2\theta_1}<\frac{\bar{s}}{2}$$
+										which is a example of adverse selection: the high quality car drops out from the market as long as the price is below the level which every seller is willing to sell.
+									</p>
+									<p>For trade to occur, we need further that the buyer is willing to buy:
+										$$\theta_2\mathbb{E}\left[s|s\leq \frac{p}{\theta_1}\right]-p\geq0 \Leftrightarrow \theta_2\geq2\theta_1$$
+										Now the criteria for trade is stricter in a sense that the taste (type) difference must be great enough to justify trade. In general, there will be less trade than in benchmark case: Too little trade.
+									</p>
+									<header>
+										<h2>Competitive Equilibrium and Asymmetric Information</h2>
+									</header>
+									<p>Now suppose there are \(N\) sellers and \(N\) potential buyers, where \(N\) is a large number. Each buyer can only demand one car. Consider both \(\theta_0\) as sellers' type and \(s\) as quality. \(\theta_0\) is public information (\(\theta_0>0\)). \(s\) is unobservable to the buyers, but they know it is distributed on \([\underline{s}, \bar{s}]\) with density \(f(s)\) and CDF \(F(s)\) (\(\underline{s}>0\)). Again, we use \(p\) to denote price and \(\theta\) to denote buyers's type. \(\theta\) is distributed in the population of buyers with density \(g(\theta)\) and CDF \(G(\theta)\).</p>
+									<p>Then, buyers' net surplus from buying a car:
+										$$\theta s-p$$
+									</p>
+									<header>
+										<h3>Benchmark (Symmetric Information)</h3>
+									</header>
+									<p>Trade is efficient iff: (notice that price is only a transfer between buyers and sellers)
+										$$\theta s\geq \theta_0 s \Leftrightarrow \theta \geq \theta_0$$
+									</p>
+									<p>Then the efficient volume of trade is \(1-G(\theta_0)\).</p>
+									<header>
+										<h3>Asymmetric Information</h3>
+									</header>
+									<header>
+										<h4>Sellers' Side (Supply)</h4>
+									</header>
+									<p>Since \(N\) is a large number, we see sellers as price taker. Sellers will sell iff the price is high enough:
+										$$p\geq\theta_0s \Leftrightarrow s\leq\frac{p}{\theta_0}$$
+									</p>
+									<p>So, the supply at price \(p\) is all the cars with quality below \(\frac{p}{\theta_0}\):
+										$$S(p)=F\left(\frac{p}{\theta_0}\right)$$
+									</p>
+									<p>It is easy to conclude that the supply function is upward sloping: \(\partial_pS=f(\frac{p}{\theta_0})\frac{1}{\theta_0}>0\)</p>
+									<header>
+										<h4>Buyers' Side (Demand)</h4>
+									</header>
+									<p>By Akerlof above, we already know that the buyers' inference on quality from the price is:
+										$$s^e(p)\equiv \mathbb{E}\left[s|s\leq\frac{p}{\theta_0}\right]$$
+									</p>
+									<p>Buyers will buy iff:
+										$$\theta s^e(p) \geq p \Leftrightarrow \theta\geq\frac{p}{s^e(p)}$$
+									</p>
+									<p>So, buyers with taste higher than \(\frac{p}{s^e(p)}\) demands a car:
+										$$D(p)=1-G\left(\frac{p}{s^e(p)}\right)$$
+									</p>
+									<p>The demand function is not necessarily downward sloping, if we take derivative:
+										$$D'(p)=-g\left(\frac{p}{s^e(p)}\right)\partial_p\frac{p}{s^e(p)}$$
+										$$\partial_p\frac{p}{s^e(p)}=\frac{s^e(p)-p\partial_ps^e(p)}{s^e(p)^2}=\frac{1}{s^e(p)}-\frac{p}{s^e(p)^2}\frac{\partial s^e(p)}{\partial p}$$
+									</p>
+									<p>Note that \(-g(\cdot)< 0\), so \(D(p)\) is upward sloping iff:
+									$$\frac{1}{s^e(p)}-\frac{p}{s^e(p)^2}\frac{\partial s^e(p)}{\partial p} < 0$$
+									$$\Leftrightarrow \frac{p}{s^e(p)}\frac{\partial s^e(p)}{\partial p} > 1</0>$$</p>
+									<p>So, if the elasiticity of the conditional expectation w.r.t. price is greater than \(1\), the demand function is upward sloping. Further, by Leibniz rule, we can write the slope as follows:
+										$$D'(p)=\frac{g\left(\frac{p}{s^e(p)}\right)}{s^e(p)}\left(\frac{p}{s^e(p)}\partial_ps^e(p)-1 \right)$$
+										$$\partial_ps^e(p)=\partial_p \frac{\int_0^{\frac{p}{\theta_0}}sf(s)\,ds}{F\left(\frac{p}{\theta_0}\right)}$$
+										$$\partial_p\int_0^{\frac{p}{\theta_0}}sf(s)\,ds=\frac{p}{\theta_0}f\left(\frac{p}{\theta_0}\right)\frac{1}{\theta_0}-0+\int_0^{\frac{p}{\theta_0}}\partial_psf(s)\,ds=\frac{p}{\theta_0}f\left(\frac{p}{\theta_0}\right)\frac{1}{\theta_0}$$
+										$$\Leftrightarrow \partial_p \frac{\int_0^{\frac{p}{\theta_0}}sf(s)\,ds}{F\left(\frac{p}{\theta_0}\right)}=\frac{p}{\theta_0}f\left(\frac{p}{\theta_0}\right)\frac{1}{\theta_0}\left(\frac{1}{F\left(\frac{p}{\theta_0}\right)}\right)-\frac{\int_0^{\frac{p}{\theta_0}}sf(s)\,ds}{F\left(\frac{p}{\theta_0}\right)^2}f\left(\frac{p}{\theta_0}\right)\frac{1}{\theta_0}$$
+										$$\Leftrightarrow \frac{p}{s^e(p)}\partial_ps^e(p)=\frac{p}{s^e(p)}\frac{f\left(\frac{p}{\theta_0}\right)}{F\left(\frac{p}{\theta_0}\right)}\frac{1}{\theta_0}\left(\frac{p}{\theta_0}-s^e(p)\right)$$
+										$$\Leftrightarrow \frac{p}{s^e(p)}\partial_ps^e(p)=\left(\frac{\frac{p}{\theta_0}}{s^e(p)}-1\right)\frac{p}{\theta_0}\frac{f\left(\frac{p}{\theta_0}\right)}{F\left(\frac{p}{\theta_0}\right)}$$
+										$$\Leftrightarrow D'(p)=\frac{g\left(\frac{p}{s^e(p)}\right)}{s^e(p)}\left(\left(\frac{\frac{p}{\theta_0}}{s^e(p)}-1\right)\frac{p}{\theta_0}\frac{f\left(\frac{p}{\theta_0}\right)}{F\left(\frac{p}{\theta_0}\right)}-1\right)$$	
+									</p>
+									<p>There are two sides of effect: a higher price leads one to infer a higher average quality, while the direct effect is always negative.</p>
+									<header>
+										<h4>Market Clearing</h4>
+									</header>
+									<p>In order to achieve equilibrium, we need to impose market clearing conditions, that is, demand equals supply:
+										$$S(p)=D(p)$$
+										$$\Leftrightarrow F\left(\frac{p}{\theta_0}\right)=\left[1-G\left(\frac{p}{s^e(p)}\right)\right]$$
+									</p>
+									<header>
+										<h4>Result 1</h4>
+									</header>
+									<p>There can be multiple equilibria. As shown before, this is due to the possibility of upward sloping of demand function. A higher price can let the buyer tend to believe the car is of high quality.</p>
+									<header>
+										<h4>Result 2</h4>
+									</header>
+									<p>If there are multiple equilibria, the one with the highest price Pareto dominates.</p>
+									<p>Clearly, sellers will prefer a higher price, but what about buyers? Assume w.l.o.g. that \(p_2>p_1\) are equilibria prices, then by the increasing property of supply function we have:
+										$$D(p_2)=S(p_2)>S(p_1)=D(p_1)$$
+										$$\Leftrightarrow 1-G\left(\frac{p_2}{s^e(p_2)}\right)>1-G\left(\frac{p_1}{s^e(p_1)}\right)$$
+										$$\Leftrightarrow G\left(\frac{p_1}{s^e(p_1)}\right)>G\left(\frac{p_2}{s^e(p_2)}\right)$$
+									</p>
+									<p>Since \(G(\cdot)\) is increasing, we have:
+										$$\frac{p_1}{s^e(p_1)}>\frac{p_2}{s^e(p_2)}$$
+										$$\Leftrightarrow \theta s^e(p_1)-\frac{s^e(p_1)}{s^e(p_2)}p_2>\theta s^e(p_1)-p_1$$
+									</p>
+									<p>Multiply the lhs by \(\frac{s^e(p_2)}{s^e(p_1)}>1\) will give something greater than lhs (note that \(s^e(\cdot)\) is increasing):
+										$$\theta s^e(p_2)-p_2>\theta s^e(p_1)-\frac{s^e(p_1)}{s^e(p_2)}p_2>\theta s^e(p_1)-p_1$$
+									</p>
+									<p>Then we have shown that the net utility for buyers are also higher in the equlibrium with a higher price.</p>
+									<p>The intuition is a circulation argument: Under an inefficient equilibrium, buyers believe the average quality is low and insist on low prices. Given low prices sellers of high quality cars will not sell, so the average quality is low.</p>
+									<header>
+										<h2>An Application to the Labour Market (MWG 13.B)</h2>
+									</header>
+									<p>Think workers as sellers selling productivity and firms as buyers. Assume there are \(N\) workers and \(N\) firms, where \(N\) is some large number. Each firm can at most hire \(1\) worker. \(\theta\) is the productivity of workers if employed. This is workers' private information. Firms know that \(\theta\) is distributed on \([\underline{\theta},\bar{\theta}]\) with density function \(f(\theta)>0\) and CDF \(F(\theta)\).
+										If self-employed, workers can get \(r(\theta)\). Assume a single wage rate \(w\).
+									</p>
+									<header>
+										<h3>First Best</h3>
+									</header>
+									<p>If workers' types are observable by firms, then the welfare maximisation is:
+										$$\max_{I(\theta)\in\{0,1\}}\int_{\underline{\theta}}^{\bar{\theta}}\left[I(\theta)\theta+(1-I(\theta))r(\theta)\right]f(\theta)\,d\theta$$
+									</p>
+									<p>Pareto efficient:
+										$$I(\theta)=\begin{cases}1, \text{ if } \theta\geq r(\theta) \\ 0, \text{ if } \theta< r(\theta) \end{cases}$$
+									</p>
+									<p>Set of employed workers:
+										$$\Theta=\{\theta: r(\theta)\leq \theta\}$$
+									</p>
+									<header>
+										<h3>Unobservable Worker Types</h3>
+									</header>
+									<p>Express the set of employed as a function of wage:
+										$$\Theta(w)=\{\theta: r(w) \leq w\}$$
+									</p>
+									<p>Workers will not be employed if wage is lower than what they can get if remaining self-employed.</p>
+									<p>Use \(z(w)\) to denote Firms' demand for labour. If firm believes that expected productivity is \(\mu\), we have:
+										$$z(w)=\begin{cases}0, &\text{ if } \mu< w \\ [0,+\infty), &\text{ if } \mu=w \\ +\infty, &\text{ if } \mu>w \end{cases}$$
+										where \(+\infty\) means every worker is hired.
+									</p>
+									<p>Let \(\Theta^*\) be the set of employed in a candidate equilibrium. Then, the equilibrium belief and wage should be:
+										$$\mu^*=\mathbb{E}[\theta|\theta\in\Theta^*]=w^*$$	
+									</p>
+									<header>
+										<h4>Competitive Equilibrium</h4>
+									</header>
+									<p> A competitive equilibrium consists of a wage rate \(w^*\) and a set of employed workers \(\Theta^*\) such that:
+										$$w^*=\mathbb{E}(\theta|\theta\in\Theta^*) \text{ and } \Theta^*=\{\theta: r(\theta)\leq w^*\}$$
+									</p>
+									<p>If \(\Theta^*=\varnothing\), then set \(\mathbb{E}(\theta|\theta\in\Theta^*)=\mathbb{E}(\theta)\)</p>
+									<header>
+										<h4>Example 1</h4>
+									</header>
+									<p>Suppose \(r(\theta)=r\). \(r\) is a constant with \(\underline{\theta}< r< \bar{\theta}\). Then the Pareto efficency is given by:
+										$$I(\theta)=\begin{cases}1, \text{ if } \theta\geq r \\ 0, \text{ if } \theta< r \end{cases}$$
+									</p>
+									<p>But this cannot be an equilibrium. First consider the case where \(w\geq r\), everyone will accept the wage offer and thus:
+										$$\Theta^*=[\underline{\theta},\bar{\theta}]$$
+										$$\Leftrightarrow w^*=\mathbb{E}(\theta|\theta\in\Theta^*)=\mathbb{E}(\theta)\geq r \text{  } \unicode{x21af} $$
+									</p>
+									<p>It cannot be an equlibrium either if \(w< r\), since no one will accept the work:
+										$$\Theta^*=\varnothing$$
+										$$\Leftrightarrow w^*=\mathbb{E}(\theta|\theta\in\Theta^*)=\mathbb{E}(\theta)< r \text{  } \unicode{x21af}$$
+									</p>
+									<header>
+										<h4>Example 2 with Adverse Selection</h4>
+									</header>
+									<p>Suppose \(r(\theta)=\alpha\theta\), where \(0< \alpha< 1\). Then \(r'(\theta)=\alpha>0\), which means \(r(\cdot)\) is increasing. Further, \(r(\theta)< \theta\) for all \(\theta\in[\underline{\theta},\bar{\theta}]\), which indicates that it is efficient to hire everybody. </p>
+									<p>Now, assume \(\theta\) is not observable to firms. Firms only know \(\theta\) is distributed on \([0,2]\) with density \(f(\theta)=\frac{1}{2}\).</p>
+									<p>Firms infer workers' average type based on the fact that they accept the wage offer:
+										$$\mu=\mathbb{E}[\theta|\alpha\theta\leq w]=\mathbb{E}\left[\theta|\theta\leq \frac{w}{\alpha}\right]=\frac{w}{2\alpha}$$
+									</p>
+									<p>It is then clear that there will be no employment if \(\mu< w\), i.e. \(\alpha>\frac{1}{2}\). In this case the expected productivity is lower than the the ammount that the firm has to pay.</p>
+									<p>For this adverse selection phenonmenon to occur, we need the wage level is the same for everyone, and \(r(\theta)\) is increasing. These can guarantee the underlying intuiition to be true: net benefit for the worker \(w-r(\theta)\) is decreasing in type. From this perspective, we may think of some ways to overcome the inefficiency.</p>
+
+
+									
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
