@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Overcoming Akerlof</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="index.html">Contracts and Information</a></li>
+						<li><a href="#">Institution economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Overcoming Akerlof</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>Some prerequisite for this section is signalling games. If confused with concepts such as pooling equilibrium and separating equilibrium, please refer to a game theory introductory book or the slides provided on lecture.</p>
+									<header>
+										<h2>Warranties</h2>
+									</header>
+									<p>Warranties can be a signal of quality and hence may get around market contraction due to asymmetric information.</p>
+									<header>
+										<h3>General Setup</h3>
+									</header>
+									<p>Assume 2 potential levels of expected quality of a second hand car: \(\bar{s}\) as the high quality and \(\underline{s}\) as the low quality. Further use \(r\) and \(q\) to denote the probability of broken down, in particular:
+										$$\bar{s}=r\cdot 1 +(1-r)\cdot 0 \text{ with probability } \alpha$$
+										$$\underline{s}=q\cdot 1 +(1-q)\cdot 0 \text{ with probability } 1-\alpha$$
+										where \(r>q\), i.e. a good car has a higher probability of functioning well. If a car functions well, then it's value is \(1\). Otherwise, it's \(0\). \(\alpha\) is the ex-ante probability that a car is good.
+									</p>
+									<p>Moreover, a car can be repair at cost \(c\) if broken, which can restore it's value to \(1\). The seller can issue warranties (a commitment to repair the car). Denote this decision by \(w\), where \(w=1\) if with warranty, and \(w=0\) if without warranty.</p>
+									<p>Denote the valuation of seller and buyer as \(\theta_1\) and \(\theta_2\) respectively. To guarantee the possibility of trade, assume \(\theta_1< \theta_2\).</p>
+									<header>
+										<h3>Akerlof's Problem</h3>
+									</header>
+									<p>First of all, put warranties aside. On \(c\), we can distinguish two cases: if \(c< \theta_1\), the repairing is ex-post efficient; if \(c> \theta_1\), the repairing is ex-post inefficient. Both of the efficiency conclusions are regardless of the ownership.</p>
+									<header>
+										<h4>Case 1: Ex-post efficient repair (\(c< \theta_2\))</h4>
+									</header>
+									<p>In this case seller is willing to sell the car if the value minus the expected cost of repair is less than the price. The car will always have value of \(1\). Even if it broken, it can be restored to \(1\). Then seller of good car is willing to sell if:
+										$$\theta_1-(1-r)c\leq p \Rightarrow \theta_1-(1-q)c\leq p$$
+										since \(r> q\), if the good car owner is willing to sell at price \(p\), then the bad car own is also willing to sell at price \(p\).
+									</p>
+									<p>Then, buyer can infer from a price higher than \(\theta_1-(1-r)c\) that the expected cost of repairing the car is: 
+										$$(\alpha(1-r)+(1-\alpha)(1-q))c$$
+										the buyer is thus willing to buy if:
+										$$\theta_2-(\alpha(1-r)+(1-\alpha)(1-q))\geq p$$
+									</p>
+									<p>Then, combine two inequalities, there can be trade iff
+										$$\theta_2\geq \theta_1+(1-\alpha)(r-q)c > \theta_1$$
+									</p>
+									<p>So, the condition for trade is stricter than efficient. In specific, if \(\theta_2< \theta_1+(1-\alpha)(r-q)c\), then the good car owners will not sell their cars and the market outcome is inefficient. On the other hand, the lowest quality is always possible to be traded at low prices.</p>
+									<header>
+										<h4>Case 2: Ex-post inefficient repair (\(c> \theta_2\))</h4>
+									</header>
+									<p>In this case, no one wants to repair the car. The expected value of the car is then a convex combination between \(0\) and \(1\) according to the probability of well functioning. The seller of a good car is willing to sell if:
+										$$r\theta_1\leq p \Rightarrow q\theta_1< p$$
+										Given the good car owner is willing to sell, the bad car seller is also willing to sell.
+									</p>
+									<p>The buyer can then infer from the price satisfying the above inequality that the average quality of the car is:
+										$$\alpha r+(1-\alpha)q$$
+										Thus the buyer is willing to buy if:
+										$$(\alpha r+(1-\alpha)q)\theta_2 \geq p$$
+									</p>
+									<p>Combining the two inequalities, there can be trade (a price \(p\) that satisfies both inequalities) iff:
+										$$\theta_2\geq\frac{r}{\alpha r+(1-\alpha)q}\theta_1$$
+										since \(r> q\), \(\frac{r}{\alpha r+(1-\alpha)q}>1\). 
+									</p>
+									<p>Again, the condition for trade is stricter than the first best case. The market outcome is inefficient if \(\theta_2< \frac{r}{\alpha r+(1-\alpha)q}\theta_1\), supported by the fact that the good car are not traded.
+										Same as before, it is always possible to trade bad car at a low price.
+									</p>
+									<header>
+										<h3>Gameform, Strategies, and Equilibrium Concept</h3>
+									</header>
+									<p>Here, assume there are one seller and two buyers.</p>
+									<header>
+										<h4>Timing</h4>
+									</header>
+									<p>
+										S1: Nature decides the quality of the car. <br>
+										S2: Seller observes the quality and then decide on warranty. <br>
+										S3: Buyers without knowing the quality propose a price. <br>
+										S4: Seller decides whether to accept any price. Trade may or may not occur.
+									</p>
+									<header>
+										<h4>Strategies and Beliefs</h4>
+									</header>
+									<p>A buyer's strategy is a mapping from warranty decision to price offers:
+										$$p: \{0,1\}\rightarrow \mathbb{R}$$
+									</p>
+									<p>A seller's strategy consists of a mapping from qualities (types) to warranty decisions, and an acceptance rule: a mapping from types, warranty choice and prices to the offer to accept (or keep the car):
+										$$w: \{\underline{s}, \bar{s}\} \rightarrow \{0,1\}$$
+										$$a: \{\underline{s}, \bar{s}\}\times\{0,1\}\times\mathbb{R}\times\mathbb{R}\rightarrow \{0,1,2\}$$
+										where \(0\) is reject both offers while \(1\) is accept buyer 1's price, and \(2\) is accept buyer 2's price.
+									</p>
+									<p>Buyers does not know the seller's type (the quality of the car), so we define the belief as the possibility that the car is good conditional on warranty decision:
+										$$\mu: \{0,1\} \rightarrow  [0,1]$$ 
+									</p>
+									<header>
+										<h4>Perfect Bayesian Equilibrium</h4>
+									</header>
+									<p>As in usual game theory context, we require the buyers' strategies are optimal given their beliefs \(\mu(w)\). \(\mu(w)\) can be derived by the seller's strategy and Bayes' rule.</p>
+									<p>The seller's strategy is optimal given the buyers' strategies and beliefs.</p>
+									<header>
+										<h3>
+											Warranties and Ex-post Inefficient Repairs
+										</h3>
+									</header>
+									<p>Here focus on the ex-post inefficient repair case, and the market is inefficient (good car is not traded):
+										$$\theta_2< \frac{r}{(\alpha r+(1-\alpha)q)}\theta_1\tag{A1}$$
+										$$c>\theta_2\tag{A2}$$
+										$$c\leq\frac{\theta_2-r\theta_1}{1-r}\tag{A3}$$
+									</p>
+									<p>\((\text{A}1)\) and \((\text{A}2)\) are given in earlier analysis. \((\text{A}3)\) is to make sure that the owners of the good cars are willing to participate if separating equilibria are played. We will come to that later.</p>
+									<header>
+										<h4>
+											Existence of Separating Equilibria
+										</h4>
+									</header>
+									<p>Separating means different types behave differently. In this case, it's the seller of the car will behave differently.</p>
+									<header>
+										<h5>Result 1</h5>
+									</header>
+									<p>
+										The following strategy and belief constellation forms an equilibrium for \(\theta_2< c\leq \frac{\theta_2-r\theta_1}{1-r}\): <br>
+										Good Seller: \(w(\bar{s})=1\), accept the highest price offer exceeding \(r\theta_1\), and reject others. If two offers are of the same price, randomised with probability \(\frac{1}{2}\). <br>
+										Bad Seller: \(w(\underline{s})=0\), accept the highest price offer exceeding \(q\theta_1\), and reject others. If two offers are of the same price, randomised with probability \(\frac{1}{2}\). <br>
+										Buyer i: Beliefs: \(\mu(1)=1\), \(\mu(0)=0\); Prices: \(p_i(1)=\theta_2\), \(p_i(0)=q\theta_2\), for \(i\in \{1,2\}\).
+									</p>
+									<p>To see this is indeed a separating equilibrium, first look at the good car owner.</p>
+									<p>Good seller is willing to issue a warranty, i.e. the expected payoff from selling the car with a warranty is higher than selling without a warranty (incentive constraint):
+										$$\theta_2-(1-r)c\geq q\theta_2 \Leftrightarrow c\leq\frac{1-q}{1-r}\theta_2$$
+										and prefer to sell the car than keep the car (participation constraint):
+										$$\theta_2-(1-r)c\geq r\theta_1 \Leftrightarrow c\leq\frac{\theta_2-r\theta_1}{1-r}$$
+										Note that the participation constraint is given by \((\text{A}3)\).
+									</p>
+									<p>We need to show the participation constraint indeed implies the incentive constraint:
+										$$\frac{\theta_2-r\theta_1}{1-r}\leq\frac{1-q}{1-r}\theta_2$$
+										$$\Leftrightarrow \theta_2\leq \frac{r}{q}\theta_1$$
+										$$(\text{A}1) \stackrel{r>q}{\Rightarrow} \theta_2\leq \frac{r}{q}\theta_1$$
+									</p>
+									<p>Next, consider the bad car owner.</p>
+									<p>Bad seller prefer to sell without a warranty, i.e. the expected payoff from selling the car without a warranty is higher than selling with a warranty (incentive constraint):
+										$$q\theta_2\geq\theta_2-(1-q)c \Leftrightarrow c\geq \theta_2$$
+										Note that this is given by \((\text{A}2)\). Further, we need the bad seller wants to sell:
+										$$q\theta_2\geq q\theta_1 \Leftrightarrow \theta_2\geq\theta_1$$
+										This is trivially satisfied by our general assumption.
+									</p>
+									<p>Finally, buyers' beliefs are justified by separating behaviour. The buyers' strategies are optimal given the seller's strategy, buyer's belief and other buyer's strategy. </p>
+									<header>
+										<h5>Result 2</h5>
+									</header>
+									<p>Warranty system may improve the ex-ante efficiency of the market given the condition above (good car can be in the market). However, ex-post efficiency is not attained (an additional cost for warranty).</p>
+									<p>In this case, sellers of bad cars are reluctant to mimic the seller of good cars. At the same time, the cost of repairing is not too high for the good seller to issue this signal.</p>
+									<header>
+										<h4>
+											Nonexistence of Pooling Equilibria
+										</h4>
+									</header>
+									<p>By pooling, the good seller and the bad seller behave the same. We claim that there is no pooling equilibrium in this setting.</p>
+									<header>
+										<h5>Result 3</h5>
+									</header>
+									<p>There cannot be an equilibrium with both selling and offering no warranties. There cannot be an equilibrium where both offer warranties.</p>
+									<p>Both statements are easy to understand. The first one would be a recurrence of the Akerlof problem, and the second one is not consistent with the ex-post inefficiency of repairing.</p>
+									<p>Formally, if \(w(\underline{s})=w(\bar{s})=0\), then buyers' belief is the average value: \(\mu(0)=\alpha r+(1-\alpha)q\), so the price offer is \(p_i(0)=(\alpha r+(1-\alpha)q)\theta_2\). Notice that:
+										$$(\text{A}1) \Leftrightarrow (\alpha r+(1-\alpha)q)\theta_2< r\theta_1$$
+										So, the good seller will not sell.
+									</p>
+									<p>If \(w(\underline{s})=w(\bar{s})=1\), buyers' belief is still the average value: \(\mu(1)=\alpha r+(1-\alpha)q\), and \(\mu(0)\) can be any value in \([0,1]\). So the price offers are:
+										$$p_i(1)=\theta_2$$
+										$$p_i(0)=(\mu(0)r+(1-\mu(0))q)\theta_2$$
+									</p>
+									<p>For the good seller, the incentive constraint is:
+										$$\theta_2-(1-r)c\geq (\mu(0)r+(1-\mu(0))q)\theta_2$$
+										$$\Leftrightarrow c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-r}\theta_2$$
+										Note that:
+										$$r>q \Leftrightarrow \mu(0)r+(1-\mu(0))q< r \Leftrightarrow \frac{1-\mu(0)r-(1-\mu(0))q}{1-r} >1$$
+										So, by \((\text{A}2)\), it can be that:
+										$$ \theta_2 < c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-r}\theta_2$$
+										Participation constraint is the same as in separating equilibria. So no issue for the good seller.
+									</p>
+									<p>For the bad seller, the incentive constraint is:
+										$$\theta_2-(1-q)c\geq (\mu(0)r+(1-\mu(0))q)\theta_2$$
+										$$\Leftrightarrow c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-q}\theta_2$$
+										However,
+										$$r>q \Leftrightarrow \mu(0)r+(1-\mu(0))q> q \Leftrightarrow \frac{1-\mu(0)r-(1-\mu(0))q}{1-q} < 1$$
+										So, the incentive constraint for the bad seller is inconsistent with \((\text{A}2)\). \(\unicode{x21af}\)
+									</p>
+									<header>
+										<h4>Equilibria with Inefficient Trade</h4>
+									</header>
+									<p>If \(c>\frac{\theta_2-r\theta_1}{1-r}\), in any equilibrium good seller will not sell. Since the participation constraint is violated, there is no separating equilibrium where both sell. Above we have seen that there exists no pooling equilibrium where both sell.</p>
+									<p>Trade of a bad car at price \(q\theta_2\) is always feasible.</p>
+									<p>Ex-post efficient repairs are left as an exercise.</p>
+
+									<header>
+										<h2>Job Market Signalling (Spence (1973))</h2>
+									</header>
+									Coming soon.
+
+
+
+
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Jiawei Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
