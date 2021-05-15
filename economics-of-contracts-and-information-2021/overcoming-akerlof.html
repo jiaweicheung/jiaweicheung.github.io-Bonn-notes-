@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Overcoming Akerlof</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="index.html">Contracts and Information</a></li>
+						<li><a href="../institution-economics/index.html">Institution economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Overcoming Akerlof</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>Some prerequisite for this section is signalling games. If confused with concepts such as pooling equilibrium and separating equilibrium, please refer to a game theory introductory book or the slides provided on lecture.</p>
+									<p>All graphs appear on this page are direct quotes from Prof. Dr. Dzesö Szalay's slides.</p>
+									<header>
+										<h2>Warranties</h2>
+									</header>
+									<p>Warranties can be a signal of quality and hence may get around market contraction due to asymmetric information.</p>
+									<header>
+										<h3>General Setup</h3>
+									</header>
+									<p>Assume 2 potential levels of expected quality of a second hand car: \(\bar{s}\) as the high quality and \(\underline{s}\) as the low quality. Further use \(r\) and \(q\) to denote the probability of broken down, in particular:
+										$$\bar{s}=r\cdot 1 +(1-r)\cdot 0 \text{ with probability } \alpha$$
+										$$\underline{s}=q\cdot 1 +(1-q)\cdot 0 \text{ with probability } 1-\alpha$$
+										where \(r>q\), i.e. a good car has a higher probability of functioning well. If a car functions well, then it's value is \(1\). Otherwise, it's \(0\). \(\alpha\) is the ex-ante probability that a car is good.
+									</p>
+									<p>Moreover, a car can be repair at cost \(c\) if broken, which can restore it's value to \(1\). The seller can issue warranties (a commitment to repair the car). Denote this decision by \(w\), where \(w=1\) if with warranty, and \(w=0\) if without warranty.</p>
+									<p>Denote the valuation of seller and buyer as \(\theta_1\) and \(\theta_2\) respectively. To guarantee the possibility of trade, assume \(\theta_1< \theta_2\).</p>
+									<header>
+										<h3>Akerlof's Problem</h3>
+									</header>
+									<p>First of all, put warranties aside. On \(c\), we can distinguish two cases: if \(c< \theta_1\), the repairing is ex-post efficient; if \(c> \theta_1\), the repairing is ex-post inefficient. Both of the efficiency conclusions are regardless of the ownership.</p>
+									<header>
+										<h4>Case 1: Ex-post efficient repair (\(c< \theta_2\))</h4>
+									</header>
+									<p>In this case seller is willing to sell the car if the value minus the expected cost of repair is less than the price. The car will always have value of \(1\). Even if it broken, it can be restored to \(1\). Then seller of good car is willing to sell if:
+										$$\theta_1-(1-r)c\leq p \Rightarrow \theta_1-(1-q)c\leq p$$
+										since \(r> q\), if the good car owner is willing to sell at price \(p\), then the bad car own is also willing to sell at price \(p\).
+									</p>
+									<p>Then, buyer can infer from a price higher than \(\theta_1-(1-r)c\) that the expected cost of repairing the car is: 
+										$$(\alpha(1-r)+(1-\alpha)(1-q))c$$
+										the buyer is thus willing to buy if:
+										$$\theta_2-(\alpha(1-r)+(1-\alpha)(1-q))\geq p$$
+									</p>
+									<p>Then, combine two inequalities, there can be trade iff
+										$$\theta_2\geq \theta_1+(1-\alpha)(r-q)c > \theta_1$$
+									</p>
+									<p>So, the condition for trade is stricter than efficient. In specific, if \(\theta_2< \theta_1+(1-\alpha)(r-q)c\), then the good car owners will not sell their cars and the market outcome is inefficient. On the other hand, the lowest quality is always possible to be traded at low prices.</p>
+									<header>
+										<h4>Case 2: Ex-post inefficient repair (\(c> \theta_2\))</h4>
+									</header>
+									<p>In this case, no one wants to repair the car. The expected value of the car is then a convex combination between \(0\) and \(1\) according to the probability of well functioning. The seller of a good car is willing to sell if:
+										$$r\theta_1\leq p \Rightarrow q\theta_1< p$$
+										Given the good car owner is willing to sell, the bad car seller is also willing to sell.
+									</p>
+									<p>The buyer can then infer from the price satisfying the above inequality that the average quality of the car is:
+										$$\alpha r+(1-\alpha)q$$
+										Thus the buyer is willing to buy if:
+										$$(\alpha r+(1-\alpha)q)\theta_2 \geq p$$
+									</p>
+									<p>Combining the two inequalities, there can be trade (a price \(p\) that satisfies both inequalities) iff:
+										$$\theta_2\geq\frac{r}{\alpha r+(1-\alpha)q}\theta_1$$
+										since \(r> q\), \(\frac{r}{\alpha r+(1-\alpha)q}>1\). 
+									</p>
+									<p>Again, the condition for trade is stricter than the first best case. The market outcome is inefficient if \(\theta_2< \frac{r}{\alpha r+(1-\alpha)q}\theta_1\), supported by the fact that the good car are not traded.
+										Same as before, it is always possible to trade bad car at a low price.
+									</p>
+									<header>
+										<h3>Gameform, Strategies, and Equilibrium Concept</h3>
+									</header>
+									<p>Here, assume there are one seller and two buyers.</p>
+									<header>
+										<h4>Timing</h4>
+									</header>
+									<p>
+										S1: Nature decides the quality of the car. <br>
+										S2: Seller observes the quality and then decide on warranty. <br>
+										S3: Buyers without knowing the quality propose a price. <br>
+										S4: Seller decides whether to accept any price. Trade may or may not occur.
+									</p>
+									<header>
+										<h4>Strategies and Beliefs</h4>
+									</header>
+									<p>A buyer's strategy is a mapping from warranty decision to price offers:
+										$$p: \{0,1\}\rightarrow \mathbb{R}$$
+									</p>
+									<p>A seller's strategy consists of a mapping from qualities (types) to warranty decisions, and an acceptance rule: a mapping from types, warranty choice and prices to the offer to accept (or keep the car):
+										$$w: \{\underline{s}, \bar{s}\} \rightarrow \{0,1\}$$
+										$$a: \{\underline{s}, \bar{s}\}\times\{0,1\}\times\mathbb{R}\times\mathbb{R}\rightarrow \{0,1,2\}$$
+										where \(0\) is reject both offers while \(1\) is accept buyer 1's price, and \(2\) is accept buyer 2's price.
+									</p>
+									<p>Buyers does not know the seller's type (the quality of the car), so we define the belief as the possibility that the car is good conditional on warranty decision:
+										$$\mu: \{0,1\} \rightarrow  [0,1]$$ 
+									</p>
+									<header>
+										<h4>Perfect Bayesian Equilibrium</h4>
+									</header>
+									<p>As in usual game theory context, we require the buyers' strategies are optimal given their beliefs \(\mu(w)\). \(\mu(w)\) can be derived by the seller's strategy and Bayes' rule.</p>
+									<p>The seller's strategy is optimal given the buyers' strategies and beliefs.</p>
+									<header>
+										<h3>
+											Warranties and Ex-post Inefficient Repairs
+										</h3>
+									</header>
+									<p>Here focus on the ex-post inefficient repair case, and the market is inefficient (good car is not traded):
+										$$\theta_2< \frac{r}{(\alpha r+(1-\alpha)q)}\theta_1\tag{A1}$$
+										$$c>\theta_2\tag{A2}$$
+										$$c\leq\frac{\theta_2-r\theta_1}{1-r}\tag{A3}$$
+									</p>
+									<p>\((\text{A}1)\) and \((\text{A}2)\) are given in earlier analysis. \((\text{A}3)\) is to make sure that the owners of the good cars are willing to participate if separating equilibria are played. We will come to that later.</p>
+									<header>
+										<h4>
+											Existence of Separating Equilibria
+										</h4>
+									</header>
+									<p>Separating means different types behave differently. In this case, it's the seller of the car will behave differently.</p>
+									<header>
+										<h5>Result 1</h5>
+									</header>
+									<p>
+										The following strategy and belief constellation forms an equilibrium for \(\theta_2< c\leq \frac{\theta_2-r\theta_1}{1-r}\): <br>
+										Good Seller: \(w(\bar{s})=1\), accept the highest price offer exceeding \(r\theta_1\), and reject others. If two offers are of the same price, randomised with probability \(\frac{1}{2}\). <br>
+										Bad Seller: \(w(\underline{s})=0\), accept the highest price offer exceeding \(q\theta_1\), and reject others. If two offers are of the same price, randomised with probability \(\frac{1}{2}\). <br>
+										Buyer i: Beliefs: \(\mu(1)=1\), \(\mu(0)=0\); Prices: \(p_i(1)=\theta_2\), \(p_i(0)=q\theta_2\), for \(i\in \{1,2\}\).
+									</p>
+									<p>To see this is indeed a separating equilibrium, first look at the good car owner.</p>
+									<p>Good seller is willing to issue a warranty, i.e. the expected payoff from selling the car with a warranty is higher than selling without a warranty (incentive constraint):
+										$$\theta_2-(1-r)c\geq q\theta_2 \Leftrightarrow c\leq\frac{1-q}{1-r}\theta_2$$
+										and prefer to sell the car than keep the car (participation constraint):
+										$$\theta_2-(1-r)c\geq r\theta_1 \Leftrightarrow c\leq\frac{\theta_2-r\theta_1}{1-r}$$
+										Note that the participation constraint is given by \((\text{A}3)\).
+									</p>
+									<p>We need to show the participation constraint indeed implies the incentive constraint:
+										$$\frac{\theta_2-r\theta_1}{1-r}\leq\frac{1-q}{1-r}\theta_2$$
+										$$\Leftrightarrow \theta_2\leq \frac{r}{q}\theta_1$$
+										$$(\text{A}1) \stackrel{r>q}{\Rightarrow} \theta_2\leq \frac{r}{q}\theta_1$$
+									</p>
+									<p>Next, consider the bad car owner.</p>
+									<p>Bad seller prefer to sell without a warranty, i.e. the expected payoff from selling the car without a warranty is higher than selling with a warranty (incentive constraint):
+										$$q\theta_2\geq\theta_2-(1-q)c \Leftrightarrow c\geq \theta_2$$
+										Note that this is given by \((\text{A}2)\). Further, we need the bad seller wants to sell:
+										$$q\theta_2\geq q\theta_1 \Leftrightarrow \theta_2\geq\theta_1$$
+										This is trivially satisfied by our general assumption.
+									</p>
+									<p>Finally, buyers' beliefs are justified by separating behaviour. The buyers' strategies are optimal given the seller's strategy, buyer's belief and other buyer's strategy. </p>
+									<header>
+										<h5>Result 2</h5>
+									</header>
+									<p>Warranty system may improve the ex-ante efficiency of the market given the condition above (good car can be in the market). However, ex-post efficiency is not attained (an additional cost for warranty).</p>
+									<p>In this case, sellers of bad cars are reluctant to mimic the seller of good cars. At the same time, the cost of repairing is not too high for the good seller to issue this signal.</p>
+									<header>
+										<h4>
+											Nonexistence of Pooling Equilibria
+										</h4>
+									</header>
+									<p>By pooling, the good seller and the bad seller behave the same. We claim that there is no pooling equilibrium in this setting.</p>
+									<header>
+										<h5>Result 3</h5>
+									</header>
+									<p>There cannot be an equilibrium with both selling and offering no warranties. There cannot be an equilibrium where both offer warranties.</p>
+									<p>Both statements are easy to understand. The first one would be a recurrence of the Akerlof problem, and the second one is not consistent with the ex-post inefficiency of repairing.</p>
+									<p>Formally, if \(w(\underline{s})=w(\bar{s})=0\), then buyers' belief is the average value: \(\mu(0)=\alpha r+(1-\alpha)q\), so the price offer is \(p_i(0)=(\alpha r+(1-\alpha)q)\theta_2\). Notice that:
+										$$(\text{A}1) \Leftrightarrow (\alpha r+(1-\alpha)q)\theta_2< r\theta_1$$
+										So, the good seller will not sell.
+									</p>
+									<p>If \(w(\underline{s})=w(\bar{s})=1\), buyers' belief is still the average value: \(\mu(1)=\alpha r+(1-\alpha)q\), and \(\mu(0)\) can be any value in \([0,1]\). So the price offers are:
+										$$p_i(1)=\theta_2$$
+										$$p_i(0)=(\mu(0)r+(1-\mu(0))q)\theta_2$$
+									</p>
+									<p>For the good seller, the incentive constraint is:
+										$$\theta_2-(1-r)c\geq (\mu(0)r+(1-\mu(0))q)\theta_2$$
+										$$\Leftrightarrow c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-r}\theta_2$$
+										Note that:
+										$$r>q \Leftrightarrow \mu(0)r+(1-\mu(0))q< r \Leftrightarrow \frac{1-\mu(0)r-(1-\mu(0))q}{1-r} >1$$
+										So, by \((\text{A}2)\), it can be that:
+										$$ \theta_2 < c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-r}\theta_2$$
+										Participation constraint is the same as in separating equilibria. So no issue for the good seller.
+									</p>
+									<p>For the bad seller, the incentive constraint is:
+										$$\theta_2-(1-q)c\geq (\mu(0)r+(1-\mu(0))q)\theta_2$$
+										$$\Leftrightarrow c\leq \frac{1-\mu(0)r-(1-\mu(0))q}{1-q}\theta_2$$
+										However,
+										$$r>q \Leftrightarrow \mu(0)r+(1-\mu(0))q> q \Leftrightarrow \frac{1-\mu(0)r-(1-\mu(0))q}{1-q} < 1$$
+										So, the incentive constraint for the bad seller is inconsistent with \((\text{A}2)\). \(\unicode{x21af}\)
+									</p>
+									<header>
+										<h4>Equilibria with Inefficient Trade</h4>
+									</header>
+									<p>If \(c>\frac{\theta_2-r\theta_1}{1-r}\), in any equilibrium good seller will not sell. Since the participation constraint is violated, there is no separating equilibrium where both sell. Above we have seen that there exists no pooling equilibrium where both sell.</p>
+									<p>Trade of a bad car at price \(q\theta_2\) is always feasible.</p>
+									<p>Ex-post efficient repairs are left as an exercise.</p>
+
+									<header>
+										<h2>Job Market Signalling (Spence (1973))</h2>
+									</header>
+									<p>Based on Gibbons, R. (1992) A primer in Game Theory, chapter 4.</p>
+									<header>
+										<h3>General Model</h3>
+									</header>
+									<p>A general analysis, with education as a signalling device. There are \(2\) firms and \(1\) worker.</p>
+									<header>
+										<h4>Timing</h4>
+									</header>
+									<p>
+										S1: Nature determines a worker's type \(\eta\in\{H,L\}\), \(Prob(\eta=H)=q\). <br>
+										S2: Worker learns ability and then chooses education \(e\geq0\). <br>
+										S3: Two firms observe education (not the type) and then make simultaneous wage offers. <br>
+										S4: The worker accepts the highest offer, if any. If indifferent, accepts each with probability \(\frac{1}{2}\).
+									</p>
+									<header>
+										<h4>Payoffs</h4>
+									</header>
+									<p>
+										For the worker:
+										$$w-c(\eta, e)$$
+									</p>
+									<p>
+										For the firm, if accepted:
+										$$y(\eta,e)-w$$
+										$$0, \text{otherwise}$$
+									</p>
+									<p>Notice that \(c(\eta, e)\) is the marginal cost of education and \(y\) is the productivity of the worker. In this model, education can be totally unproductive and costly.</p>
+									<p>Further we assume that education is more costly for the low type than for the high type:
+										$$c_e(L,e)>c_e(H,e)$$
+									</p>
+									<header>
+										<h4>Equilibrium Analysis</h4>
+									</header>
+									<p>We can draw out indifferent curves for the low type and the high type:</p>
+									<p align='center'><img srcset="indifferent-curves.png 320w, indifferent-curves.png 480w, indifferent-curves.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"  src="indifferent-curves.png" alt="indifferent-curves" /></p>
+									<p>Note that the indifferent curves better off through shifting northwest direction. Moving from \((e_1,w_1)\) to \((e_2,w_L)\) and \((e_2,w_H)\) we can see that the low type worker requires a higher increase in wage to compensate him for an increase in education level: \(w_L-w_1\geq w_H-w_1\).</p>
+									<p>
+										Wages depends on the belief:
+										$$w(e)=\mu(H,e)\cdot y(H,e)+(1-\mu(H,e))\cdot y(L,e)$$
+										where \(\mu(H,e)\) is the market's belief that worker is high type. We further assume that firms belief are the same off equilibrium path. On equilibrium path the beliefs must be the same by definition.
+									</p>
+									<header>
+										<h5>First Best</h5>
+									</header>
+									<p>If the types are observable, then there will be two different wage and education levels to different types. The Pareto efficient \(e(\eta)\) is:
+										$$\arg\max_e \{y(\eta,e)-c(\eta,e)\}$$
+										and wage \(w\) is just a transfer between firms and worker. Since there are two firms, in equilibrium, firms earn \(0\) profit, net surplus goes to the worker.
+									</p>
+									<p>There could be two cases: <br>
+										Case i) the no envy case:
+									</p>
+									<p align='center'><img srcset="no-envy.png 320w, no-envy.png 480w, no-envy.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" src="no-envy.png" alt="no envy case" /></p>
+									<p>
+										No envy in a sense that: <br>
+										\((w^*(H),e^*(H))\) is not in type \(L\)'s upper contour set, and <br>
+										\((w^*(L),e^*(L))\) is not in type \(H\)'s upper contour set. <br>
+										So the high type does not envy the low type, and the low type does not envy the high type.
+									</p>
+									<p>Case ii) the envy case:</p>
+									<p align='center'><img srcset="envy.png 320w, envy.png 480w, envy.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"  src="envy.png" alt="envy case" /></p>
+									<p>In this case, \((w^*(H),e^*(H))\) is the allocation that both \(L\) and \(H\) want to have. Notice that \((w^*(H),e^*(H))\) is in the upper contour set of the low type. But since the type is observable, we are doing fine in this case.</p>
+									<p>The above equilibrium is not sustainable with asymmetric information. Since the low type will claim himself as a high type, and hence lower the productivity. Then, firms will make losses.</p>
+									<header>
+										<h5>Unobservable Types - A Pooling Equilibrium</h5>
+									</header>
+									<p>All types behave the same way in the pooling equilibrium. Denote the equilibrium education (if any) is \(e_p\), and the corresponding wage level is:
+										$$w_p=q\cdot y(H,e_p)+(1-q)\cdot y(L,e_p)$$
+										Notice that the beliefs on path is determined by prior: no new information.
+									</p>
+									<p>
+										To construct a complete equilibrium, we need to determine the belief off path. There can be many possibilities as long as both parties have no profitable deviations. One example could be:
+										$$\mu(H,e)= \begin{cases}0, \text{ for } e\neq e_p \\ q, \text{ for } e=e_p \end{cases}$$
+										Then the complete wage strategy is:
+										$$w(e)= \begin{cases}y(L,e), &\text{ for } e\neq e_p \\ w_p, &\text{ for } e=e_p \end{cases}$$
+									</p>
+									<p>Then, the type \(\eta\) worker's problem is:
+										$$\max_e \{w(e)-c(\eta,e)\}$$
+									</p>
+									<p>So, the observable part of one pooling equilibrium is \((w_p,e_p)\) in the following graph:</p>
+									<p align='center'><img srcset="pooling-equilibrium.png 320w, pooling-equilibrium.png 480w, pooling-equilibrium.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" 
+										src="pooling-equilibrium.png" alt="a pooling equilibrium" /></p>
+									<p>Since both types behave the same, the wage must be on the average productivity line. Comparing different indifferent curves for the high type and the low type respectively, we find no favourable deviation for either of them. Further, there cannot be a pooling equilibrium with \(e_p> e'\). Otherwise the low type will deviate to \((w^*(L),e^*(L))\), high type will not deviate,though. </p>
+									<p>
+										Above it's only one example of pooling equilibria, there are plenty of others as long as no party has profitable deviation. Notice that if we are aiming at a different on path equilibrium, any level with \(e\leq e'\) will do.
+									</p>
+									<p>We can also look for different equilibria with different off-path beliefs. One example can be:
+										$$\mu(H|e)=\begin{cases}0, \text{ for } e\leq e'' \text{ except for } e=e_p \\ q, \text{ for } e=e_p \\ q, \text{ for } e>e'' \end{cases}$$
+										$$w(e)=\begin{cases} y(L,e), &\text{ for } e\leq e'' \text{ except for } e=e_p \\ w_p, &\text{ for } e=e_p \\ w_p, &\text{ for } e>e''  \end{cases}$$
+									</p>
+									<p>It is important for off-path beliefs to sustain an equilibrium. In this particular example, since \(e>e''\) is seen as average type, the high type has no incentive to deviate. If this is not the case, then high type may have favourable deviation.
+										Again, if \(e^*(L)\leq e_p \leq e'\), then the low type has no incentive to deviate.
+									</p>
+									<header>
+										<h5>Unobservable Types - A Separating Equilibrium</h5>
+									</header>
+									<p>Focus on the envy case since the other one is trivial: just the Pareto efficient case can sustain an equilibrium.</p>
+									<p>In a separating equilibrium, action by the worker is type revealing. By the graph of the envy case, we can immediately conclude that the low type must exert effort \(e^*(L)\) in a separating equilibrium. Then the problem is left with the high type.</p>
+									<p align='center'><img srcset="separating-equilibrium.png 320w, separating-equilibrium.png 480w, separating-equilibrium.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="separating-equilibrium.png" alt="a separating equilibrium" /></p>
+									<p>On the graph above, we can see that \(e_s\) is the smallest education choice possible in a separating equilibrium by high type worker, otherwise the low type has incentive to deviate. So we can see that the high type has to depart from the best best allocation \((w^*(H), e^*(H))\) to \((y(H,e), e_s)\).</p>
+									<p>For the sake of completeness, we need to specify the beliefs and the wage level:
+										$$\mu(H|e)= \begin{cases}0, \text{ for } e< e_s \\ 1, \text{ for } e\geq e_s \end{cases}$$
+										$$w(e)= \begin{cases} y(L,e), \text{ for } e< e_s \\ y(H,e), \text{ for } e\geq e_s \end{cases}$$
+									</p>
+									<p>As when analysing pooling equilibria, there can be many separating equilibria. They can be distinguished from each other by either on path behaviour or off path behaviour. For an example of the latter, we have:
+										$$\mu(H|e)= \begin{cases}0, \text{ for } e< e^*(H) \\ \epsilon, \text{ for } e^*(H)< e< e_s \\ 1, \text{ for } e\geq e_s \end{cases}$$
+										For \(\epsilon\) sufficiently small, this is an equilibrium. As long as the wage for the high type is below \(I_L\) tangible to low types optimal option, separating equilibrium can be claimed.
+									</p>
+									<header>
+										<h5>Unobservable Types - Hybrid Equilibrium</h5>
+									</header>
+									<p>A hybrid equilibrium is mixing pooling and separating, i.e. one type is randomising between the pooling strategy and the separating strategy. Focus on the case where the low type mixing. Then by mixing, we know that the low type is indifferent between \(e*(L)\) and some pooling strategy.</p>
+									<p>Suppose the low type choose some education level \(e_h\) which is the same as the high type in equilibrium with probability \(\pi\). Then the belief is:
+										$$\mu(H|e_h)=\frac{q}{q+(1-q)\pi}\equiv r$$
+										Then, the optimal wage level is:
+										$$w_h=r\cdot y(H,e_h)+(1-r)\cdot y(L, e_h)$$
+										Note that:
+										$$\pi< 1 \Leftrightarrow q+(1-q)\pi< 1 \Leftrightarrow q< r \Leftrightarrow w_h> w_p $$
+									</p>
+									<p>Thus, one hybrid equilibrium can be:</p>
+									<p align='center'><img srcset="hybrid-equilibrium.png 320w, hybrid-equilibrium.png 480w, hybrid-equilibrium.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="hybrid-equilibrium.png" alt="a hybrid equilibrium" /></p>
+									<p>First, low type is indifferent between \(e^*(L)\) and \(e_h\). Second, depending on the level of \(\pi\), when firms see \(e_h\), they may incline to think of a high type. Specifically, the lower the \(\pi\), the more likely is a high type worker with education level \(e_h\). On the graph, if \(\pi\) decreases, the weighted average productivity line will shift upwards.</p>
+									<p>To be complete, beliefs and wage level are specified below:
+										$$\mu(H|e)= \begin{cases}0, \text{ for } e< e_h \\ r, \text{ for } e\geq e_h \end{cases}$$
+										$$w(e)= \begin{cases} y(L,e), &\text{ for } e< e_h \\ r\cdot y(H,e)+(1-r)\cdot y(L, e), &\text{ for } e\geq e_h \end{cases}$$										
+									</p>
+									<p>Due to single crossing property (the indifferent curves of two types only cross once), it can never be the case that both of the types are indifferent between two allocations at the same time. But something worth to think of is: we could have a situation where both types mix (See from the graph, with three different allocations).</p>
+									<header>
+										<h2>Refinements of PBE: An Application to Job Market Signalling</h2>
+									</header>
+									<p>Based on Gibbons, R. (1992) A primer in Game Theory, chapter 4.</p>
+									<p>Sometimes we may get equilibria that doe not make any sense: PBE prevents player \(i\) from playing a strategy that is strictly dominated at the beginning of any of \(i\)'s information sets.
+										This indicates the other player \(j\) should not believe \(i\) would play such a strategy. This is formally called requirement 5.
+									</p>
+									<header>
+										<h3>Requirement 5</h3>
+									</header>
+									<p>Before we formally describe the concept, we can get an intuition by looking at the following game:</p>
+									<p align='center'><img srcset="requirement-5.png 320w, requirement-5.png 480w, requirement-5.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="requirement-5.png" alt="requirement 5" /></p>
+									<p>
+										One can show that one of the equilibria is \(\{R,R',p\leq \frac{1}{2}\}\): If player \(1\) deviates, then she can get only \(0\). For player \(2\) choosing \(R'\) to be the optimal, we need:
+										$$p\leq 1\cdot(1-p) \Leftrightarrow p\leq\frac{1}{2}$$
+										So, \(\{R,R',p\leq \frac{1}{2}\}\) is indeed an equilibrium.
+									</p>
+									<p>However, this equilibrium is not convincing. \(1-p geq \frac{1}{2}\) means that player \(2\) should believe player \(1\) more likely to play \(M\). But \(M\) is dominated for player \(1\):
+										$$\max\{0,1\}< 2$$
+										So why would player \(2\) places more beliefs on player \(1\) playing \(M\)?
+									</p>
+									<header>
+										<h4>Requirement 5</h4>
+									</header>
+									<p>If possible, each player's belief off equilibrium path should place \(0\) probability on nodes that are reached only if another player plays a strategy that is strictly dominated beginning at some information set. In other words, no player should think the other player would play something that is dominated.</p>
+									<p>In the example, player \(2\) should place \(0\) probability on the node reached by player \(1\) playing \(M\).</p>
+									<p>'If possible' means that the belief should be add up to \(1\). So the other node in the information set should not be dominated, otherwise both would be placed zero probability, thus the requirement cannot be applied.
+										To see this, we can simply change player \(1\)'s payoff from \(\{L,L'\}\) to \(1.5\). Then requirement 5 cannot be applied since if we apply, \(L\) is also dominated and should be placed zero probability too. This contradicts \(p+1-p=1\).
+									</p>
+									<p>In the signalling context, look at the following game:</p>
+									<p align='center'><img srcset="signalling-requirement-5.png 320w, signalling-requirement-5.png 480w, signalling-requirement-5.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="signalling-requirement-5.png" alt="signalling requirement 5" /></p>
+									<p>
+										Consider the pooling equilibrium \(\{(L,L),(u,d),p=0.5,q\geq 0.5\}\). First check this is indeed an equilibrium: For the sender:
+										$$3>0 \text{ and } 1> 0$$
+										For the receiver, if the sender plays \(L\), we need:
+										$$2p> 1-p \Leftrightarrow p> \frac{1}{3}$$
+										which is satisfied. If the sender plays \(R\), we need:
+										$$q>1-q \Leftrightarrow q\geq\frac{1}{2}$$
+										So \(\{(L,L),(u,d),p=0.5,q\geq 0.5\}\) is indeed a pooling equilibrium.
+									</p>
+									<p>
+										However, \(R\) is dominated for type \(1\) sender: \(\max\{0,1\}< \min\{2,3\}\). So, receiver should not believe a \(t_1\) playing \(R\): \(q=0\). Moreover, choosing \(R\) is not dominated for \(t_2\): \(2>1\).
+										If receiver choose \(u\) when \(R\), then \(t_2\) could get a higher payoff. So, \(1-q=1\) can be supported. This would then rule out the pooling equilibrium \(\{(L,L),(u,d),p=0.5,q\geq 0.5\}\).
+									</p>
+									<header>
+										<h4>Signalling Requirement 5</h4>
+									</header>
+									<p>Formally, if the information set following \(m_j\) is off the equilibrium path and \(m_j\) is dominated for type \(t_i\), then (if possible) the receiver should place zero belief on type \(t_i\), i.e. \(\mu(t_i|m_j)=0\).</p>
+									<p>In the example above, \(m_j=R\) and \(t_i=t_1\).</p>
+									<p>If possible indicates that \(m_j\) should not be dominated for all types in \(T\).</p>
+									<header>
+										<h3>Requirement 6</h3>
+									</header>
+									<p>
+										In some games, equilibria are still unreasonable even if satisfying requirement 5. Consider the following Beer and Quiche game (Cho and Kreps (1987) QJE):
+									</p>
+									<p>Suppose with probability \(0.1\) the sender is of type 'wimpy', with probability \(0.9\) is of type 'surly'.</p>
+									<p>
+										Sender's message: Quiche or Beer for breakfast. <br>
+										Receiver's action: Duel or Not duel with the sender. <br>
+										The wimpy type prefers quiche, and the surly type prefers beer. Both types prefer not to duel. <br>
+										The receiver prefers to duel with the wimpy than surly.
+									</p>
+									<p align='center'><img srcset="requirement-6.png 320w, requirement-6.png 480w, requirement-6.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="requirement-6.png" alt="requirement 6" /></p>
+									<p>
+									<p>
+										One PBE is pooling on Quiche: \(\{(\text{Quiche}, \text{Quiche}), (\text{Not duel}, \text{Duel}), p=0.1, q\geq\frac{1}{2}\}\). <br>
+										To see this is indeed an equilibrium, notice that the wimpy type cannot profitably deviate: \(3>0\). <br>
+										The surly type cannot profitably deviate: \(2>1\). <br>
+										For the receiver not having profitable deviation, we need:
+										$$0.1\cdot 0+0.9\cdot 0=0\geq 0.1\cdot 1+0.9\cdot (-1)=-0.8$$
+										and this is indeed true. Further, we need:
+										$$q\cdot 1+(1-q)\cdot (-1)=2q-1\geq q\cdot 0+(1-q)\cdot 0=0 \Leftrightarrow q\geq\frac{1}{2}$$
+										So given \(q\) is sufficiently large, this is indeed an equilibrium.
+									</p>
+									<p>
+										Moreover, this satisfies requirement 5. For both sender types, Beer is not dominated: \(\min\{1,3\}< \max\{0,2\}\) for wimpy and \(\min\{0,2\}< \max\{1,3\}\) for surly.										
+									</p>
+									<p>
+										However, the belief off equilibrium path does not make sense. \(q>\frac{1}{2}\) means that given Beer, it is more likely from the wimpy type. Yet, the wimpy type cannot improve his payoff on equilibrium path: \(3>\max\{0,2\}\).
+										The surly type can: \(2<\max\{1,3\}\). So, if \(q< \frac{1}{2}\), the surly type can improve on the equilibrium payoff by having beer. We call Beer as equilibrium-dominated for the wimpy type.
+									</p>
+									<header>
+										<h4>Equilibrium-dominated</h4>
+									</header>
+									<p>Formally, in a PBE of a signalling game, the message \(m_j\) is equilibrium-dominated for type \(t_i\) if \(t_i\)'s equilibrium payoff \(U^*(t_i)\) is greater than \(t_i\)'s highest possible payoff from \(m_j\):
+										$$U^*(t_i)>\max_{a_k\in A}U_s(t_i,m_j,a_k)$$
+									</p>
+									<p>In our example, \(m_j\) is to choose Beer, \(t_i\) is the wimpy type. \(U^*(t_i)=3\) and \(\max_{a_k\in A}U_s(t_i,m_j,a_k)=\max\{0,2\}=2\). We want to also place zero belief on equilibrium-dominated strategies.</p>
+									<header>
+										<h4>Signaling Requirement 6</h4>
+									</header>
+									<p>If the information set following \(m_j\) is off the equilibrium path and \(m_j\) is equilibrium-dominated for type \(t_i\), then (if possible) the receiver's belief \(\mu(t_i|m_j)=0\).</p>
+									<p>This is possible if \(m_j\) is not equilibrium-dominated for for types. In above example, \(q=0\), and this is possible since Beer is not equilibrium-dominated for surly type: \(2< \max\{1,3\}\).</p>
+									<p>Requirement 6 is a stricter requirement than requirement 5: a equilibrium-dominated strategy is not necessarily dominated. However, a dominated strategy must also be equilibrium-dominated. So with requirement 6, requirement 5 is redundant.</p>
+									<header>
+										<h3>
+											Application to the Job Market Signalling Game (Graphical Illustration)
+										</h3>
+									</header>
+									<p>These two requirements can rule out some equilibria.</p>
+									<p>By requirement 5, separating equilibria are ruled out except the one where the low type chooses \(e^*(L)\) and the high type \(e=e_s\) as the following graph:</p>
+									<p align='center'><img srcset="separating-equilibria-ruled-out.png 320w, separating-equilibria-ruled-out.png 480w, separating-equilibria-ruled-out.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="separating-equilibria-ruled-out.png" alt="ruling out separating equilibria" /></p>
+									<p>
+										Note that any possible payoff that the low type can get if he chooses \(e\geq e_s\) is dominated (below the indifference curve of the low type crossing \((e^*(L),w^*(L))\)):
+										$$y(H,e_s)\preceq y(L,e^*(L))$$
+										Further, \(e>e_s\) is not dominated for the high type (depending on beliefs), which then indicates \(\mu(H|e)=1\) for \(e> e_s\) by requirement 5.
+									</p>
+									<p>
+										However, \(e>e_s\) cannot be an equilibrium, since the high type can always deviate to \(e_s\) to get a more preferable payoff, given the fact that \(e_s> e^*(H)\). Then the only separating equilibrium that survives is where the high type chooses \(e_s\).
+									</p>
+									<p>
+										A similar argument is that, by requirement 5, in any equilibrium the high type must get at least \(y(H,e_s)-c(H,e_s)\). This can further rule out some hybrid and pooling equilibria, depending on the fraction of the high type in the market.
+									</p>
+									<p>Case 1 (\(q\) low):</p>
+									<p align='center'><img srcset="low-q.png 320w, low-q.png 480w, low-q.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="low-q.png" alt="q low" /></p>
+									<p>
+										The key here is that the high type's indifference curve crossing \((e_s,y(H,e_s))\) is always above the average productivity line. This immediately implies that there is no pooling equilibrium, since pooling equilibrium should be on the average productivity line.
+									</p>
+									<p>There is no hybrid equilibrium either. If the low type does the mixing, the low type should be indifferent between the two mixed allocation, one of which should be on the high type's indifference curve. But by the single crossing property, that allocation does not exist.
+										The high type cannot do the mixing, because if that is the case, the expected productivity line will be below the average productivity line. The average productivity line is already below the high type's indifference curve.
+									</p>
+									<p>
+										Case 2 (\(q\) high):
+									</p>
+									<p align='center'><img srcset="high-q.png 320w, high-q.png 480w, high-q.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="high-q.png" alt="q low" /></p>
+									<p>
+										\(q\) is high in a sense that the average productivity line have intersections with the high productivity line. Notice that the \(I_L\) and \(I_H\) that are closer to axis intersects at \((e_p,w_p)\). Then the shaded area could be supported as pooling equilibria until requirement 6 comes in.
+									</p>
+									<p>
+										Consider the effort level between \(e'\) and \(e''\). Although they are not dominated for the low type (better than \((e^*(L),w^*(L))\) for example), but they are equilibrium-dominated for the low type:
+										$$w_p-c(L,e_p)>y(H,e)-c(L,e)$$
+										But they are not equilibrium-dominated for the high type. So, by requirement 6, \(\mu(H|e)=1\) for \(e\in(e',e'')\), and pooling equilibria that both choosing that level of effort are ruled out. Hybrid equilibria can also be ruled out by a similar argument.
+									</p>
+									<p>
+										Although we only use graphical illustration to analyse the application of refinements on job market signalling, this can surly be done by a formal analytic argument.
+									</p>
+
+
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Jiawei Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
