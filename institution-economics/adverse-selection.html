@@ -150,8 +150,109 @@
 									<header>
 										<h2>Two-Sided Asymmetric Information</h2>
 									</header>
-									Coming Soon.
-									
+									<p>
+										Under this situation, both parties have some private information. As the following shows, an impossibility result will be reached.
+									</p>
+									<header>
+										<h3>Timing</h3>
+									</header>
+									<p>
+										Date 0: Seller learns his type \(c\geq 0\), and buyer learns her type \(v \geq0\). <br>
+										Date 1: A contract is made voluntarily, with reservation utility \(0\). <br>
+										Date 2: Contractually specified trade decision \(x \in \{0,1\}\) is chosen, payment \(t\) is made.
+									</p>
+									<p>
+										So, the buyer's payoff is:
+										$$xv-t$$
+										And the seller's payoff is:
+										$$t-xc$$
+									</p>
+									<header>
+										<h3>Assumptions</h3>
+									</header>
+									<p>
+										\(v\) is a random variable with cumulative distribution function \(G(v)\) and support \([0,1]\). <br>
+										\(c\) is a random variable with cumulative distribution function \(F(c)\) and support \([0,1]\).
+									</p>
+									<header>
+										<h3>
+											First Best
+										</h3>
+									</header>
+									<p>
+										It is ex-post efficient to trade if and only if the buyer has a higher valuation:
+										$$x^{FB}(c,v) = \arg\max (v-c)x$$
+										$$\Leftrightarrow x^{FB}(c,v)=\begin{cases}1, \text{ if } c \leq v \\ 0, \text{otherwise} \end{cases}$$
+									</p>
+									<header>
+										<h3>Impossibility Result</h3>
+									</header>
+									<header>
+										<h4>
+											Assumptions
+										</h4>
+									</header>
+									<p>
+										\(c \in \{c_L, c_H\}\), with \(Pr\{c=c_L\}=\frac{1}{2}\) <br>
+										\(v \in \{v_L, v_H\}\), with \(Pr\{v=v_H\}=\frac{1}{2}\), and <br>
+										\(0< c_L < v_L < c_H < v_H\), otherwise the case will be less interesting.
+									</p>
+									<p>
+										Given these assumptions, it's easy to see that:
+										$$x^{FB}(c_L, v_H) = x^{FB}(c_H, v_H) = x^{FB}(c_L, v_L) = 1$$
+										$$x^{FB}(c_H, v_L) = 0$$
+									</p>
+									<header>
+										<h4>Claim</h4>
+									</header>
+									<p>
+										There are parameter constellations such that given voluntary participation the first-best solution cannot be attained.
+									</p>
+									<p>
+										To see this, by revelation principal, we can consider only direct mechanism. That is, seller and buyer reveal their type, then according to the first best allocation rule, determine the transaction.
+									</p>
+									<p>
+										Denote \(t(c_i, v_j)=t_{ij}\), where \(i.j \in \{L,H\}\), as the payment to the seller. Suppose the ex post efficient trading rule is to be implemented. Then 
+										two groups of constraints must be satisfied, namely the buyer and the seller's participation constraints of both the low type and the high type, and the buyer and the seller's incentive constraints of both the low type and the high type.
+										All together there are 8 constraints. In particular, look at the following 4 constraints:
+										$$\mathbb{E}_v[t(c_L,v)-x^{FB}(c_L,v)c_L]\geq\mathbb{E}_v[t(c_H,v)-x^{FB}(c_H,v)c_L]$$
+										$$\Leftrightarrow \frac{1}{2}(t_{LH}-c_L)+\frac{1}{2}(t_{LL}-c_L) \geq \frac{1}{2}(t_{HH}-c_L)+\frac{1}{2}t_{HL} \tag{ICcL}$$
+										$$\mathbb{E}_c[x^{FB}(c,v_H)v_H-t(c,v_H)]\geq\mathbb{E}_c[x^{FB}(c,v_L)v_H-t(c,v_L)]$$
+										$$\Leftrightarrow \frac{1}{2}(v_H-t_{LH})+\frac{1}{2}(v_H-t_{HH}) \geq \frac{1}{2}(v_H-t_{LL})-\frac{1}{2}t_{HL} \tag{ICvH}$$
+										$$\mathbb{E}_c[x^{FB}(c,v_L)v_L-t(c,v_L)]\geq 0$$
+										$$\Leftrightarrow \frac{1}{2}(v_L-t_{LL})-\frac{1}{2}t_{HL}\geq 0 \tag{PCvL}$$
+										$$\mathbb{E}_v[t(c_H,v)-x^{FB}(c_H,v)c_H]\geq 0$$
+										$$\Leftrightarrow \frac{1}{2}(t_{HH}-c_H)+\frac{1}{2}t_{HL}\geq 0 \tag{PCcH}$$
+									</p>
+									<p>
+										We will see that these four constraints cannot always hold at the same time, and thus the impossibility result is justified. First, add the \((ICcL)\) and \((ICvH)\) together:
+										$$\frac{1}{2}(v_H-c_L)+\frac{1}{2}(t_{LL}-c_L)+\frac{1}{2}(v_H-t_{HH})\geq \frac{1}{2}(t_{HH}-c_L)+\frac{1}{2}(v_H-t_{LL})$$
+										$$\Leftrightarrow t_{HH}-t_{LL} \leq \frac{1}{2}(v_H-c_L)$$
+										Then, add the \((PCvL)\) and \((PCcH)\) together:
+										$$\frac{1}{2}(v_L-t_{LL})+\frac{1}{2}(t_{HH}-c_H) \geq0$$
+										$$\Leftrightarrow t_{HH}-t_{LL} \geq c_H-v_L$$
+									</p>
+									<p>
+										Therefore, if \(\frac{1}{2}(v_H-c_L)< c_H-v_L\), then these constraints cannot hold simultaneously. Only when the gap between \(v_H\) and \(c_L\) is large enough can there be voluntary ex-post efficient.
+									</p>
+									<header>
+										<h4>Continuous random variables</h4>
+									</header>
+									<p>
+										If \(c\) and \(v\) are uniformly and independently distributed between \([0,1]\), then the following graph can illustrate the impossibility result.
+									</p>
+									<p align='center'><img srcset="continuous-rv-types-illustration.png 320w, continuous-rv-types-illustration.png 480w, continuous-rv-types-illustration.png 800w" sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+										src="continuous-rv-types-illustration.png" alt="adverse selection" /></p>
+									<p>
+										To see a more detailed discussion, please refer to (Myerson and Satterthwaite, 1981). The basic result is that the best we can achieve is trade if \(v-c \geq \frac{1}{4}\). In the graph, the red area indicates inefficiency.
+									</p>
+									<p>
+										As long as \(c\) and \(v\) overlap, the number of agent has 'positive' effect on inefficiency: incentive compatibility becomes more difficult.
+									</p>
+
+
+
+
 								</div>
 
 							</section>
