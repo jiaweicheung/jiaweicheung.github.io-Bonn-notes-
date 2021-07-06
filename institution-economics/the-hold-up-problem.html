@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>The Hold-Up Problem</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../economics-of-contracts-and-information-2021/index.html">Contracts and Information</a></li>
+						<li><a href="index.html">Institution economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>The Hold-Up Problem</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>
+										This part considers underinvestment problem under incomplete contract.
+									</p>
+									<header>
+										<h2>The Basic Model</h2>
+									</header>
+									<p>First we introduce the concept of 'Relationship-specific investments'. Relationship-specific investments involve effort that increases the surplus that
+										 can be generated only in a particular relationship. Imagine car producer and a supplier of car seats, electricity plant and coal mine, and arms manufacturer and ministry of defense.
+									</p>
+									<p>
+										In such investments, it is normal that sellers are held up with the buyer or other way round. One party could have significant difficulty in changing terms, this party usually is the one with low bargaining power. 
+										This party can be 'blackmailed' or 'exploited' in the future, which leads to underinvestment problem.
+									</p>
+									<header>
+										<h3>Timing</h3>
+									</header>
+									<p>
+										Here we assume only the seller invests.
+									</p>
+									<p>
+										Date 0: Buyer and seller write contract. <br>
+										Date 1: Seller invests effort \(e\). This is a hidden action. <br>
+										Date 2: Buyer's valuation \(v\) and seller's costs \(c\) are realised. No assumption on who observes what at this stage.<br>
+										Date 3: Trade level \(x \in [0,1]\) and payment \(t\) are realised. These are verifiable.
+									</p>
+									<p>
+										We further assume symmetric information at date 0, and there is no wealth constraint. Then, parties write contract that maximises the total surplus, and 
+										divide the surplus with an up-front payment.
+									</p>
+									<p>
+										There are two kinds of investments: self-investment and cross-investment. We call investments without direct externalities as self-investment. Under 
+										this kind of investment, \(e\) influences the distribution of \(c\). If \(e\) influences the distribution of \(v\), then this is a cross-investment, since it's 
+										investment with direct externalities.
+									</p>
+									
+									<header>
+										<h3>Payoffs</h3>
+									</header>
+									<p>
+										Buyer's payoff: 
+										$$xv-t$$
+									</p>
+									<p>
+										Seller's payoff:
+										$$t-xc-k(e)$$
+										where \(k(e)\) is the investment cost.
+									</p>
+
+									<header>
+										<h3>First Best</h3>
+									</header>
+									<p>
+										We maximise the total surplus:
+										$$\max_e (v-c)x - k(e)$$
+										So the ex-post efficient level is:
+										$$x^{FB}(c,v)=\begin{cases}1, \text{ if } c\leq v \\ 0, \text{ otherwise }\end{cases}$$
+									</p>
+									<p>
+										Ex-ante efficient investment level, before \(v\) and \(c\) are realised:
+										$$e^{FB}=\arg\max\{\mathbb{E}[(v-c)x^{FB}(c,v)|e]-k(e)\}$$
+									</p>
+									<p>
+										Sometimes is difficult to attain both.
+									</p>
+									<header>
+										<h3>Hold-Up Problem</h3>
+									</header>
+
+									Coming Soon.
+
+
+
+
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Jiawei Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
