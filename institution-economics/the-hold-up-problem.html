@@ -110,6 +110,7 @@
 									<p>
 										Ex-ante efficient investment level, before \(v\) and \(c\) are realised:
 										$$e^{FB}=\arg\max\{\mathbb{E}[(v-c)x^{FB}(c,v)|e]-k(e)\}$$
+										This is to maximise the total surplus.
 									</p>
 									<p>
 										Sometimes is difficult to attain both.
@@ -117,11 +118,37 @@
 									<header>
 										<h3>Hold-Up Problem</h3>
 									</header>
+									<p>
+										Suppose ex ante the parties write no contract, and at date 2 buyer and seller both learn \(c\) and \(v\). Then by Coase theorem, ex-post efficient trade 
+										decision \(x^{FB}(c,v)\) will be implemented at date 3. But, how will seller invests?
+									</p>
+									<p>
+										If the seller has all the ex-post bargaining power, then he will extract all the gains from trade:
+										$$(v-c)x^{FB}(c,v)$$
+										So, the seller's investment incentive is in line with the incentive in the first best benchmark. He invests \(e=e^{FB}\).
+									</p>
+									<p>
+										Now consider the other extreme where the seller has no ex-post bargaining power at all. Then the seller will get nothing at date 3. 
+										So, he will have no incentive to invest: \(e=0\).
+									</p>
+									<p>
+										Take the middle point of these two cases. If two parties have the same ex-post bargaining power, then they will equally divide the gains from trade. Then the seller 
+										invests:
+										$$\hat{e}=\arg\max\{\mathbb{E}[\frac{1}{2}(v-c)x^{FB}(c,v)|e]-k(e)\}$$
+										In general, \(\hat{e}< e^{FB}\) as the seller gets only a fraction of the investment's return.
+									</p>
+									<p>
+										Whenever the seller expects that he cannot get all, he under-invests. This is the hold-up problem. The question is then whether contracts can solve the hold up problem. If the 
+										types are observable and verifiable, then the first best solution can always be attained by setting \(x=x^{FB}(c,v)\) and \(t=vx^{FB}(c,v)\). And the seller gets all.
+									</p>
+									<p>
+										At date 0, the parties can divide the expected first-best surplus with a lump-sum payment according to their date 0 bargaining powers.
+									</p>
 
+									<header>
+										<h2>Observable but Non-verifiable Information</h2>
+									</header>
 									Coming Soon.
-
-
-
 
 								</div>
 
