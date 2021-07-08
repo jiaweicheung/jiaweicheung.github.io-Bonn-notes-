@@ -148,7 +148,146 @@
 									<header>
 										<h2>Observable but Non-verifiable Information</h2>
 									</header>
-									Coming Soon.
+									<p>
+										At date 2, both parties observe \(c\) and \(v\). But these are not verifiable by a third party, indicating an incomplete contract can occur, as there is no reason of 
+										contracting on characteristics that are not possible to verify by the third party.
+									</p>
+									<p>
+										We can attain the first-best solution by an option contract.
+									</p>
+									
+									<header>
+										<h3>Option Contract</h3>
+									</header>
+									<p>
+										After \(c\) and \(v\) are realised, the seller announces a price \(p\). The buyer has the option to buy the good at the strike price \(p\).
+									</p>
+									<p>
+										To see how the contract implements the first-best solution, do the following backward induction: <br>
+										- The buyer will buy the good iff \(v\geq p\). <br>
+										- If \(v \geq c\), the seller announces \(p=v\), so the buyer will exercise the option. <br>
+										- If \(v < c\), the seller announce a price \(p\geq c\), so the buyer will not exercise the option.
+									</p>
+									<p>
+										Then, in equilibrium the first-best trading rule \(x=x^{FB}(c,v)\) is implemented, and the seller's expected payoff is:
+										$$\mathbb{E}[(v-c)x^{FB}(c,v)|e]-k(e)$$
+										Thus, the seller chooses \(e=e^{FB}\).
+									</p>
+
+									<header>
+										<h2>Private Information and Self-Investments</h2>
+									</header>
+
+									<p>
+										The independently distributed random variables \(c\) and \(v\) are now private information of the seller and the buyer respectively. The seller's investment only affects the distribution of \(c\).
+									</p>
+									<p>
+										The following contract can implement the first-best trading rule.
+									</p>
+
+									<header>
+										<h3>Contract</h3>
+									</header>
+									<p>
+										After \(c\) and \(v\) are realised, the seller announces \(\hat{c}\). Then the buyer chooses a quantity \(x\) and must make the following payment to the seller:
+										$$t=\hat{c}x+\mathbb{E}_v[(v-\hat{c})x^{FB}(\hat{c},v)]$$
+									</p>
+									<p>
+										Suppose the seller has announced \(\hat{c}\). The buyer then chooses \(x\) in order to maximise his payoff:
+										$$vx-t=(v-\hat{c})x-\mathbb{E}_v[(v-\hat{c})x^{FB}(\hat{c},v)]$$
+										Notice that the expectation is a constant, thus the buyer chooses \(x=x^{FB}(\hat{c},v)\).
+									</p>
+									<p>
+										The seller can anticipate \(x=x^{FB}(\hat{c},v)\). Given this anticipation, the seller announces \(\hat{c}\) in order to maximise his expected payoff (incentive compatibility):
+										$$\mathbb{E}_v[t-cx^{FB}(\hat{c},v)]-k(e)=\mathbb{E}_v[\hat{c}x^{FB}(\hat{c},v)+\mathbb{E}_v[(v-\hat{c})x^{FB}(\hat{c},v)]-cx^{FB}(\hat{c},v)]-k(e)$$
+										$$=\mathbb{E}_v[(v-c)x^{FB}(\hat{c},v)]-k(e)$$
+										Therefore, the seller gets optimal payoff when truthfully announces \(\hat{c}=c\).
+									</p>
+									<p>
+										Then, the seller chooses \(e\) in order to maximise:
+										$$\mathbb{E}_v[(v-c)x^{FB}(c,v)]-k(e)$$
+										And \(e=e^{FB}\) gives the maximum.
+									</p>
+									
+									<header>
+										<h2>Private Information and Cross-Investments</h2>
+									</header>
+									<p>
+										Now, the seller's investment can affect the distribution of \(v\), i.e. buyer's valuation. In particular: <br>
+										Date 1: the seller chooses \(e \in [0,1]\), the costs are \(k(e)=\frac{1}{2}e^2\). <br>
+										Date 2: only the buyer learns the realisation of \(v \in \{v_L, v_H\}\), where \(0\leq v_L < v_H < 1\) and \(Pr\{v=v_H\}=e\).
+									</p>
+									<p>
+										Assume here that \(c\geq 0\) is commonly known. According to \(c\), consider two cases.
+									</p>
+
+									<header>
+										<h3>Higher Cost: \(v_L< c< v_H\)</h3>
+									</header>
+									<p>
+										In this case, the first-best solution is:
+										$$x^{FB}(c,v_L)=0$$
+										$$x^{FB}(c,v_H)=1$$
+										$$e^{FB}=\arg\max\mathbb{E}[(v-c)x^{FB}(c,v)|e]-k(e)$$
+										$$=\arg\max e(v_H-c)-\frac{1}{2}e^2=v_H-c$$
+									</p>
+									<p>
+										The following contract can attain the first-best solution:
+									</p>
+									<header>
+										<h4>Contract</h4>
+									</header>
+									<p>
+										Let \(p=v_H\). At date 3, the buyer has the option to buy the good at price \(p\).
+									</p>
+									<p>
+										To see how this contract attain the first-best solution, notice that the buyer will exercises the option iff \(v=v_H\). Therefore, the first-best trading rule is attained.
+									</p>
+									<p>
+										Further, the seller invests \(e\) in order to maximise his expected payoff:
+										$$\mathbb{E}[(p-c)x^{FB}(c,v)|e]-k(e)=e(p-c)-\frac{1}{2}e^2$$
+										$$\Rightarrow e=p-c=v_H-c=e^{FB}$$
+									</p>
+									<p>
+										So the first-best solution is attained.
+									</p>
+
+									<header>
+										<h3>Lower Cost: \(c< v_L\)</h3>
+									</header>
+									<p>
+										In this case, the first-best solution cannot be attained. First derive the first-best solution: 
+										$$x^{FB}(c,v_L)=x^{FB}(c,v_H)=1$$
+										$$e^{FB}=\arg\max\mathbb{E}[(v-c)x^{FB}(c,v)|e]-k(e)$$
+										$$=\arg\max \{e(v_H-c)+(1-e)(v_L-c)-\frac{1}{2}e^2\}=v_H-v_L$$
+									</p>
+									<p>
+										Then, by revelation principal, only consider the direct mechanism relying on the truthful reveal of \(v\). By direct mechanism, make the following notation:
+										$$t(v_L)=t_L$$
+										$$t(v_H)=t_H$$
+										$$x(v_L)=x_L$$
+										$$x(v_H)=x_H$$
+										To ensure the buyer reveals \(v\) truthfully, we need the following incentive compatibility constraints:
+										$$v_Hx_H-t_H \geq v_Hx_L-t_L \tag{IC_H}$$
+										$$v_Lx_L-t_L \geq v_Lx_H-t_H \tag{IC_L}$$
+										We can rewrite the constraints as follows: 
+										$$t_H-t_L \leq v_H(x_H-x_L)$$
+										$$t_H-t_L \geq v_L(x_H-x_L)$$
+									</p>
+									<p>
+										If we want to implement the first-best trading rule, we need \(x_H=x_L=1\). Then we have:
+										$$0\leq t_H-t_L \leq 0$$
+										$$\Rightarrow t_L=t_H=T$$
+										where \(T\) is some constant.
+									</p>
+									<p>
+										However, the ex-ante efficient investment cannot be implemented. The seller chooses \(e\) to maximise:
+										$$\mathbb{E}[t(v)-cx(v)|e]-k(e)=T-c-\frac{1}{2}e^2$$
+										So, the seller chooses \(e=0\).
+									</p>
+
+
+									Coming soon.
 
 								</div>
 
