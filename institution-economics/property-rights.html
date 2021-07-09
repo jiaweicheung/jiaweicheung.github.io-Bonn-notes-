@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Incomplete Contracts</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../economics-of-contracts-and-information-2021/index.html">Contracts and Information</a></li>
+						<li><a href="index.html">Institution economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Incomplete Contracts: Property Rights</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>
+										In incomplete contract models, one of the most prominent applications lie in the ownership structure, or property rights. The key is the residual control rights: 
+										When a contract is incomplete (that is usually the case), owner of a nonhuman asset has the right to decide how the asset should be used in circumstances not covered by the contract.
+									</p>
+									<header>
+										<h2>Vertical Integration</h2>
+									</header>
+									<p>
+										Let there be some intermediate product, which can only be produced with some capital (labour, physical capital, etc.). The final product cannot be produced without the intermediate product.
+									</p>
+									<p>
+										Assume two parties: <br>
+										Party A: Buyer of the intermediate product. This party has the human capital to produce the final product. <br>
+										Party B: Supplier of the intermediate product. This party has the human capital to produce the intermediate product.
+									</p>
+									<p>
+										Each party can invest in its human capital. Then the main question is: Who should be the owner of the physical asset that is necessary to produce the intermediate product?
+									</p>
+									<p>
+										Consider 3 different ownership structures: <br>
+										\(o=B\) (non-integration): B is the owner. <br>
+										\(o=A\) (integration): A is the owner. <br>
+										\(o=J\) (joint ownership): Both parties have veto power.
+									</p>
+									
+									<header>
+										<h3>Timing</h3>
+									</header>
+									<p>
+										Date 0: The parties agree on the ownership structure \(o \in \{A,B,J\}\). <br>
+										Date 1: Both parties investment on human capital. Denote as \(a\) and \(b\) respectively. <br>
+										Date 2: The parties bargaining over the delivery of the intermediate product: \(x\in\{0,1\}\).
+									</p>
+									<p>
+										If at date 2 the parties agree to collaborate, then the total surplus is:
+										$$v(a)-c(b)>0$$
+									</p>
+
+									<header>
+										<h3>Assumptions<h3>
+									</header>
+									<p>
+										The following assumptions ensure that there exists an interior solution.
+									</p>
+									<p>
+										Strictly increasing and strictly concave value function: 
+										$$v'(a)>0 \text{ and } v''(a) < 0$$
+									</p>
+									<p>
+										Strictly decreasing and strictly convex cost function: 
+										$$-c'(a)>0 \text{ and } -c''(a) < 0$$
+									</p>
+									<p>
+										Some conditions similar to Inada condition:
+										$$v'(0)>2 \text{ and } \lim_{a\rightarrow \infty}v'(a)=0$$
+										$$-c'(0)>2 \text{ and } \lim_{b\rightarrow \infty}v'(a)=0$$
+									</p>
+									<header>
+										<h3>Default Payoffs<h3>
+									</header>
+									<p>
+										If the parties do not agree to collaborate at date 2, then they get their default payoffs \(D^o_A\) and \(D^o_B\):
+										<table style="width:100%">
+											<tr>
+											  	<th>Ownership</th>
+											  	<th>\(D^o_A\)</th> 
+											  	<th>\(D^o_B\)</th>
+											</tr>
+											<tr>
+											  	<td>\(o=A\)</td>
+											  	<td>\(d_A(a)\)</td>
+											  	<td>\(0\)</td>
+											</tr>
+											<tr>
+												<td>\(o=B\)</td>
+												<td>\(0\)</td>
+												<td>\(d_B(b)\)</td>
+											</tr>
+											<tr>
+												<td>\(o=J\)</td>
+												<td>\(0\)</td>
+												<td>\(0\)</td>
+											</tr>
+										  </table>
+									</p>
+									<p>
+										Impose further assumptions regarding the default payoffs: 
+										$$d_A(a) < v(a)-c(b)$$
+										$$d_B(a) < v(a)-c(b)$$
+										If the two parties do not reach an agreement, then the owner can produce the intermediate product without the other party's human capital. Thus, 
+										they get less than what they could have got with an agreement. If they jointly own the physical asset, then both of them have veto power, so they get \(0\).
+									</p>
+									<p>
+										Moreover, investments are relationship-specific:
+										$$v'(a)>d'_A(a)$$
+										$$-c'(b)>d'_B(b)$$
+										That is to say, the investment can have a more positive affect with the other party joins.
+									</p>
+
+									<header>
+										<h3>First Best</h3>
+									</header>
+
+
+									Coming soon.
+
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Jiawei Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
