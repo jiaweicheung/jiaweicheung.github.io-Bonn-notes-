@@ -297,8 +297,185 @@
 									<header>
 										<h4>The Asymmetric Information Case</h4>
 									</header>
-									
-									Coming soon.
+									<p>
+										If the monopolist cannot observe consumer types, then the efficient solution above is not incentive compatible. One can show that \(\theta_2\) prefers the bundle \(\{s_1^*, T_1^*\}\).  
+										\(\theta_2\) pretends to be \(\theta_1\) to pay a lot less. Hence, the monopolist has to take care of incentive constraints.
+									</p>
+									<p>
+										Now, the monopolist's problem:
+										$$\max_{s_1,s_2,T_1,T_2} \{\lambda (T_1-cs_1)+(1-\lambda) (T_2-cs_2)\}$$
+										subject to:
+										$$\theta_1 V(s_1)-T_1 \geq 0 \tag{IR\(\theta_1\)}$$
+										$$\theta_2 V(s_2)-T_2 \geq 0 \tag{IR\(\theta_2\)}$$
+										$$\theta_1 V(s_1)-T_1 \geq \theta_1 V(s_2)-T_2 \tag{IC\(\theta_1\)}$$
+										$$\theta_2 V(s_2)-T_2 \geq \theta_2 V(s_1)-T_1 \tag{IC\(\theta_2\)}$$
+									</p>
+									<p>
+										To solve the problem, first notice that \((\text{IR}\theta_1)\) must be binding. Otherwise, one can increase both \(T_1\) and \(T_2\) to increase the monopolist's value. Further, 
+										\((\text{IR}\theta_2)\) is redundant:
+										$$\theta_2 V(s_2)-T_2 \geq \theta_2 V(s_1)-T_1 \geq \theta_1 V(s_1)-T_1 =0$$
+									</p>
+									<p>
+										Next, look at the incentive constraints. We guess that only \((\text{IC}\theta_2)\) is binding, and we can solve the reduced problem and then check later:
+										$$\max_{s_1,s_2,T_1,T_2} \{\lambda (T_1-cs_1)+(1-\lambda) (T_2-cs_2)\}$$
+										subject to:
+										$$\theta_1 V(s_1)-T_1 = 0 \tag{IR\(\theta_1\)}$$
+										$$\theta_2 V(s_2)-T_2 = \theta_2 V(s_1)-T_1 \tag{IC\(\theta_2\)}$$
+										Substitute out the constraints:
+										$$\max_{s_1,s_2} \{\lambda (\theta_1 V(s_1)-cs_1)+(1-\lambda) (\theta_2 V(s_2)+(\theta_1-\theta_2) V(s_1)-cs_2)\}$$
+									</p>
+									<p>
+										Take FOCs: 
+										$$\theta_2 V'(s_2)=c$$
+										$$\theta_1 V'(s_1)=\frac{c}{1-\frac{1-\lambda}{\lambda}\frac{\theta_2-\theta_1}{\theta_1}}> c$$
+									</p>
+									<p>
+										One can verify that the rest of the incentive constraints is satisfied.
+									</p>
+									<p>
+										The high consumer group consumes the efficient amount of quality: no distortion at the top. <br>
+										The low consumer group consumes inefficiently little quality. This distortion is introduced to make it less attractive to the high consumer group to misrepresent their tastes. <br>
+										The low consumer group receives no rent: no rent at the bottom.
+									</p>
+									<p>
+										The optimal nonlinear pricing scheme can be implemented with a pair of two part tariffs.
+									</p>
+									<header>
+										<h3>General case with a continuum of types</h3>
+									</header>
+									<p>
+										This part is discussed more detailed in industrial organisation context. Here is just the solution presented. 
+									</p>
+									<p>
+										Types in \([\underline{\theta}, \bar{\theta}]\) with a density \(f(\theta)\) and CDF \(F(\theta)\).
+									</p>
+									<p>
+										By revelation principle, considering direct mechanism is enough: consumers announce their \(\theta\) and the firm offers \(s(\theta)\) in exchange for a total payment of \(T(s(\theta))\).
+										Then the firm's problem:
+										$$\max_{s(\cdot), T(\cdot)} \int_{\underline{\theta}}^{\bar{\theta}} (T(\theta)-cs(\theta))f(\theta) d\theta$$
+										subject to:
+										$$\theta V(s(\theta))-T(\theta) \geq \theta V(s(\hat{\theta}))-T(\hat{\theta}), \forall \theta, \forall \hat{\theta} \neq \theta \tag{IC}$$
+										$$\theta V(s(\theta))-T(\theta) \geq 0, \forall \theta \tag{IR}$$
+									</p>
+									<p>
+										First, \(s(\theta)\) must be monotonic increasing. By incentive constraints:
+										$$\theta V(s(\theta))-T(\theta) \geq \theta V(s(\theta'))-T(\theta')$$
+										$$\theta' V(s(\theta'))-T(\theta') \geq \theta' V(s(\theta))-T(\theta)$$
+										Adding up:
+										$$(\theta'-\theta)(V(s(\theta'))-V(s(\theta))) \geq 0$$
+										Since \(V\) is increasing:
+										$$\theta' > \theta \Leftrightarrow s(\theta') \geq s(\theta)$$
+										$$\theta' < \theta \Leftrightarrow s(\theta') \leq s(\theta)$$
+									</p>
+									<p>
+										Then, we conclude that \((\text{IR})\) constraints only bind at the low end, similar to the no rent at the bottom result:
+										$$\underline{\theta} V(s(\underline{\theta}))-T(\underline{\theta})=0$$
+										By monotonicity, \(s(\theta)\) is differentiable in almost everywhere (in this case indeed everywhere). Then \(T(\theta)\) is differentiable. Consumers will choose to report \(\theta'\)
+										optimally. Hence we have the FOC:
+										$$\theta V'(s(\theta))s'(\theta)-T'(\theta)=0$$
+										So, if one changes report \(\theta\) slightly, one effect is the marginal utility is going to increase slightly, multiplied by the change in allocation. The second effect is the change in payment. 
+										Now, focus on the utility. This is the maximised utility:
+										$$u(\theta)=\max_{\hat{\theta}}\{\theta V(s(\hat{\theta}))-T(\hat{\theta})\}$$
+										Take FOC, obtained by envelope theorem:
+										$$u'(\theta)=V(s(\theta))\geq 0$$
+										So, the utility increased in \(\theta\) is just \(V(s(\theta))\).
+									</p>
+									<p>
+										The next step is using the binding \((\text{IR})\) constraint for type \(\underline{\theta}\) and the above FOC to substitute out \(T(\theta)\):
+										$$u(\underline{\theta})=\underline{\theta}V(s(\underline{\theta}))-T(\underline{\theta})=0$$
+										By definition:
+										$$\int_{\underline{\theta}}^{\theta}u'(z)dz=u(\theta)-u(\underline{\theta})$$
+										$$\Leftrightarrow u(\theta)=u(\underline{\theta})+\int_{\underline{\theta}}^{\theta}u'(z)dz$$
+										Thus:
+										$$u(\underline{\theta})=\int_{\underline{\theta}}^{\theta}V(s(z))dz$$
+										On the other hand:
+										$$u(\theta) = \int_{\underline{\theta}}^{\theta}V(s(z))dz =\theta V(s(\theta))-T(\theta)$$
+										Hence:
+										$$T(\theta)=\theta V(s(\theta))-\int_{\underline{\theta}}^{\theta}V(s(z))dz$$
+										The payment consists of two parts. The first part is gross surplus, from which the second part (information rent) is subtracted.
+									</p>
+									<p>
+										This and the monotonicity are not only necessary conditions for incentive compatible, but also sufficient conditions. So, we can substitute into the objective function:
+										$$\max_{s(\cdot)}\int_{\underline{\theta}}^{\bar{\theta}}\left(\theta V(s(\theta))-\int_{\underline{\theta}}^{\theta} V(s(z))dz-cs(\theta) \right)f(\theta)d\theta$$
+										By monotonicity of \(s(\theta)\), we have \(s'(\theta) \geq 0\).
+									</p>
+									<p>
+										Integrate by parts:
+										$$\int^{\hat{\theta}}_{\underline{\theta}}\int_{\underline{\theta}}^{\theta}V(s(z))\,dzf(\theta)\,d\theta=\int^{\theta}_{\underline{\theta}}V(s(z))\,dzF(\theta)\Bigg|^\bar{\theta}_\underline{\theta}-\int^{\bar{\theta}}_{\underline{\theta}}V(s(\theta))F(\theta)\, d\theta$$
+										$$=\int^{\bar{\theta}}_{\underline{\theta}}V(s(\theta))(1-F(\theta))\, d\theta$$
+										Then substitute back into the objective:
+										$$\max_{s(\cdot)}\int_{\underline{\theta}}^{\bar{\theta}}\left(\theta V(s(\theta))-V(s(\theta))\frac{(1-F(\theta))}{f(\theta)}-cs(\theta) \right)f(\theta)d\theta$$
+										subject to:
+										$$s'(\theta) \geq 0$$
+										For distributions that satisfy regular condition:
+										$$\frac{\partial}{\partial \theta}\left(\frac{1-F(\theta)}{f(\theta)}\right) \leq 0$$
+										the constraint is automatically satisfied.
+									</p>
+									<p>
+										So, the first-order condition for a pointwise optimum is:
+										$$(\theta V'(s(\theta))-c)f(\theta)=V'(s(\theta))(1-F(\theta))$$
+										The lhs is the impact of a marginal increase of \(s(\theta)\) on surplus. The rhs is the impact of a marginal increase of \(s(\theta)\) on expected rent that is left to consumers. At 
+										each \(\theta\), if we change the allocation slightly, all \(1-F(\theta)\) need to be given a higher rent to prevent them from deviating to consume less.
+									</p>
+									<p>
+										Check that the pointwise optimum is monotonic, differentiating the above FOC:
+										$$(\theta V'(s(\theta))-c)-V'(s(\theta))\frac{1-F(\theta)}{f(\theta)}=0$$
+										Total differentiation by implicit function theory:
+										$$\left(\theta-\frac{1-F(\theta)}{f(\theta)} \right)V''(s)\mathrm{d}s+V'(s(\theta))\left(1-\frac{\partial}{\partial \theta}\frac{1-F(\theta)}{f(\theta)}\right)\mathrm{d}\theta=0$$
+										$$\Leftrightarrow \frac{\mathrm{d}s}{\mathrm{d}\theta}=\frac{V'(s(\theta))\left(1-\frac{\partial}{\partial \theta}\frac{1-F(\theta)}{f(\theta)}\right)}{-\left(\theta-\frac{1-F(\theta)}{f(\theta)} \right)V''(s)} \geq 0$$
+										Thus, the allocation is indeed monotonic.
+									</p>
+
+									<header>
+										<h2>Monopolistic Insurance Reconsidered</h2>
+									</header>
+									<p>
+										The monopolistic insurance contract \(\{\alpha, \beta\}\) works as follows:
+										$$w_a(\beta)=w-d+\beta$$
+										\(w_a\) is the wealth conditional on an accident.
+										$$w_{na}(\alpha)=w-\alpha$$
+										\(w_{na}\) is the wealth conditional on no accident.
+										$$\bar{\theta}> \underline{\theta}$$
+										\(\theta \in \{\underline{\theta},\bar{\theta}\}\) is the accident probability. So the individuals are divided into two groups accordingly.
+									</p>
+									<p>
+										An individual's expected utility from buying insurance contract \(\{\alpha, \beta\}\) is:
+										$$U(\alpha,\beta,\theta)=\theta u(w_a(\beta))+(1-\theta) u(w_{na}(\alpha)), \text{ for } \theta\in \{\underline{\theta}, \bar{\theta}\}$$
+										Thus, linear in return in each state.
+									</p>
+									<p>
+										The insurance company offers contracts \(\{\underline{\alpha},\underline{\beta}\}\) and \(\bar{\alpha}, \bar{\beta}\) to insurants in order to maximise its profit:
+										$$\pi = \lambda\left(-\underline{\theta} \underline{\beta}+(1-\underline{\theta})\underline{\alpha}\right)+(1-\lambda)\left(-\bar{\theta}\bar{\beta}+(1-\bar{\theta})\bar{\alpha}\right)$$
+										The constraints are complex. However, since \(U(\alpha, \beta, \theta)\) is linear in \(u(w_a(\beta))\) and \(u(w_{na}(\alpha))\), we can let the company offer utility contracts:
+										$$\bar{u}_a\equiv u\left(w_a\left(\bar{\beta}\right)\right)$$
+										$$\underline{u}_{na}\equiv u\left(w_{na}\left(\underline{\alpha}\right)\right)$$
+										Let \(u_a \equiv u(w-d)\) and \(u_{na} \equiv u(w)\) denote the state contingent outside option utility (without insurance). Let \(v \equiv u^{-1}\) be the inverse function of \(u\). By 
+										strictly increasing and strict concavity of \(u(w)\) in \(w\), \(v\) is strictly convex in \(u(w)\) (its argument). By definition we have:
+										$$v(u(w_i))=w_i$$
+									</p>
+									<p>
+										We can then write the insurance company's problem as:
+										$$\max_{\underline{u}_a, \underline{u}_{na}, \bar{u}_a, \bar{u}_{na}} \left\{\lambda [-\underline{\theta}v(\underline{u}_a)-(1-\underline{\theta})v(\underline{u}_{na})+w-\underline{\theta}d]
+										+(1-\lambda)[-\bar{\theta}v(\bar{u}_a)-(1-\bar{\theta})v(\bar{u}_{na})+w-\bar{\theta}d] \right\} \tag{1}$$
+										subject to:
+										$$\bar{\theta}\bar{u}_a+(1-\bar{\theta})\bar{u}_{na} \geq \bar{\theta}\underline{u}_a+(1-\bar{\theta})\underline{u}_{na} \tag{2}$$
+										$$\underline{\theta}\underline{u}_a+(1-\underline{\theta})\underline{u}_{na} \geq \underline{\theta}\bar{u}_a+(1-\underline{\theta})\bar{u}_{na} \tag{3}$$
+										$$\bar{\theta}\bar{u}_a+(1-\bar{\theta})\bar{u}_{na} \geq \bar{\theta}u_a+(1-\bar{\theta})u_{na} \tag{4}$$
+										$$\underline{\theta}\underline{u}_a+(1-\underline{\theta})\underline{u}_{na} \geq \underline{\theta}u_a+(1-\underline{\theta})u_{na}\tag{5}$$
+									</p>
+									<p>
+										We can solve this problem by the Maskin-Riley approach. It turns out that only \((\text{2})\) and \((\text{5})\) bind. Let \(\left\{\underline{u}^*_{na}, \underline{u}^*_{a}, \bar{u}^*_{na}, \bar{u}^*_{a}\right\}\) 
+										denote a solution to the problem. Some properties of the solutions: <br>
+										For high enough \(\lambda\) the solution to the monopolist's problem is characterised by the following conditions (and the binding constraints):
+										$$\bar{u}^*_{na}=\bar{u}^*_{a} \tag{9}$$
+										$$\frac{1}{u'(v(\underline{u}^*_a))}=\frac{1}{u'(v(\underline{u}^*_{na}))}-\frac{1-\lambda}{\lambda}\frac{1}{u'(v(\underline{u}^*_a))}\frac{\bar{\theta}-\underline{\theta}}{\underline{\theta}(1-\theta)}\tag{10}$$
+										No distortion at the top and no rent at the bottom. Low risk consumers receive too little insurance, as in \((\text{10})\) shows, the second part of the rhs is greater than \(0\).
+									</p>
+									<p>
+										Whenever both consumers are served, the equilibrium utilities of the consumer with the low probability of accident satisfy \(\frac{\partial \underline{u}^*_{na}}{\partial \lambda}< 0\) 
+										and \(\frac{\partial \underline{u}^*_{a}}{\partial \lambda}> 0\). The equilibrium utilities of the consumer with the high probability of accident satisfy \(\frac{\partial}{\partial \lambda}\bar{u}^*_{na}=\frac{\partial}{\partial \lambda}\bar{u}^*_{a}>0\)
+									</p>
+								
 								</div>
 
 							</section>
