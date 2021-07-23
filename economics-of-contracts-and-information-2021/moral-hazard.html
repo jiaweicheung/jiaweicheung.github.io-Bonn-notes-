@@ -1,0 +1,444 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Moral Hazard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<a href="../index.html" class="logo"><strong>Notes</strong> <span>by Gaawai at Bonn</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="index.html">Contracts and Information</a></li>
+						<li><a href="../institution-economics/index.html">Institution economics</a></li>
+						<li><a href="#">Industrial Organisation</a></li>
+						<li><a href="#">Info and Dynamic Incentives</a></li>
+						<li><a href="#">Behavioural economics</a></li>
+						<li><a href="#">Game Theory</a></li>
+						<li><a href="#">Macroeconomics</a></li>
+						<li><a href="#">Microeconomics</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Moral Hazard</h1>
+									</header>
+									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
+									<p>Moral Hazard is a situation where the asymmetric information occurs after a contract.</p>
+									<header>
+										<h2>The Basic Model</h2>
+									</header>
+									<p>
+										A principal hires an agent. The agent then produces output: \(q \in \{0,1\}\).
+									</p>
+									<p>
+										Denote the effort level of the agent as \(a\), then the output has the following distribution: \(Pr\{q=1|a\}=p(a)\), where \(p(0)=0\) and \(p(\infty)=1\), 
+										and p is increasing and concave. The principal pays \(w\) to the agent.
+									</p>
+									<p>
+										The principal's utility:
+										$$V(q-w)$$
+										where \(V\) is increasing and weakly concave.
+									</p>
+									<p>
+										The agent's utility:
+										$$u(w)-a$$
+										Taking the cost of effort equal to \(a\) is just a convenient convention.
+									</p>
+									<header>
+										<h3>First Best</h3>
+									</header>
+									<p>
+										In the first best, principal and agent have access to the same information. If the agent chooses \(a=a^*\), then the principal pays \(w_1\) if output is \(1\) and \(w_0\) if the output is
+										\(0\). Otherwise, the agent will receive a very low payment. If
+									</p>
+									<p>
+										The principal's problem:
+										$$\max_{a,w_i}\{p(a)V(1-w_1)+(1-p(a))V(-w_0)\}$$
+										subject to the agent's participation constraint:
+										$$p(a)u(w_1)+(1-p(a))u(w_0)-a\geq 0$$
+										The agent's outside option is set to \(0\) w.l.o.g.
+									</p>
+									<p>
+										We can first take \(a\) as given, then solve for \(w_1\) and \(w_0\). Take FOCs w.r.t. \(w_1\) and \(w_0\):
+										$$\frac{V'(1-w_1)}{u'(w_1)}=\lambda=\frac{V'(-w_0)}{u'(w_0)}\tag{1}$$
+										In other words, the marginal rates of substitution should be equalised across individuals (in different states):
+										$$\frac{V'(1-w_1)}{V'(-w_0)}=\frac{u'(w_1)}{u'(w_0)}$$
+										If both parties are risk neutral, then this ratio is equal to \(1\). 
+									</p>
+									<p>
+										Take FOC with respect to the level of effort \(a\):
+										$$p'(a)[V(1-w_1)-V(-w_0)]+\lambda[p'(a)(u(w_1)-u(w_0))-1]=0\tag{2}$$
+										\((\text{1})\) and \((\text{2})\) determines the optimal level of \(a\) and \(w_i\).
+									</p>
+									<header>
+										<h3>Second Best</h3>
+									</header>
+									<p>
+										Suppose that the agent's effort level is not observable. Then, incentives need to be given through the payment scheme. Hence, the payment scheme needs to strike a balance between 
+										insurance and incentives.
+									</p>
+									<p>
+										Agent's problem:
+										$$\max_{\hat{a}}\{p(\hat{a})u(w_1)+(1-p(\hat{a}))u(w_0)-\hat{a}\}$$
+										Since agent's utility is concave, take FOC:
+										$$p'(a)(u(w_1)-u(w_0))=1$$
+										This is the incentive constraint from the principal's perspective. Apart from that, the participation constraint is also needed:
+										$$p(a)u(w_1)+(1-p(a))u(w_0)-a \geq 0$$
+									</p>
+									<p>
+										Thus, the principal's overall problem:
+										$$\max_{a, w_i}p(a)V(1-w_1)+(1-p(a))V(-w_0)$$
+										subject to:
+										$$p'(a)(u(w_1)-u(w_0))=1\tag{IC}$$
+										$$p(a)u(w_1)+(1-p(a))u(w_0)-a \geq 0 \tag{IR}$$
+									</p>
+									<header>
+										<h3>Risk Neutrality and Unlimited Liability</h3>
+									</header>
+									<p>
+										With risk neutrality and unlimited liability, the principal's problem with OBSERVABLE effort \(a\) would be (risk neutrality indicates linear utility):
+										$$\max_{a,w_i}[p(a)(1-w_1)+(1-p(a))(-w_0)]$$
+										subject to:
+										$$p(a)w_1+(1-p(a))w_0=a$$
+										Plug the constraint into the objective function:
+										$$\max_{a}[p(a)-a]$$
+										Take FOC:
+										$$p'(a)=1$$
+									</p>
+									<p>
+										Further, combine with the agents \((\text{IC})\) gives:
+										$$p'(a)(1-w_1)=1\Rightarrow w_1-w_0=1$$
+										We need agent cares about the outputs as if agent owns the firm, i.e. the difference in wage (under different outputs) must equal to the difference it makes to the firm. Recall that \(q\in \{0,1\}\).
+										So, selling the firm to the agent at price \(w_0\) (up-front payment). Then the agent keeps the output.
+									</p>
+									<header>
+										<h3>Risk Neutrality and Limited Liability</h3>
+									</header>
+									<p>
+										With limited liability, efficiency can only be achieved if \(w_0=0\). But then the principal cannot get any of the surplus. Hence, it will be better to sacrifice some surplus in order to 
+										extract some of it. Thus, the principal's problem \(w_0=0\):
+										$$\max_{a,w_1}[p(a)(1-w_1)]$$
+										subject to:
+										$$p'(a)w_1=1\tag{IC}$$
+										No \((\text{IR})\), since it is slack:
+										$$p(a)w_1+(1-p(a))w_0-a \geq 0$$
+										$$\Leftrightarrow p(a)w_1-a\geq 0$$
+										This is automatically satisfied by the \((\text{IC})\) (optimal effort choice is \(\geq 0\)):
+										$$p(a)w_1-a\geq p(0)w_1-0=0$$
+									</p>
+									<p>
+										Substituting the constraint gives a unconstrained problem: 
+										$$\max_{a}p(a)\left(1-\frac{1}{p'(a)}\right)$$
+										If \(\frac{p(a)}{p'(a)}\) is convex, take FOC:
+										$$p'(a)-\frac{(p'(a))^2-p''(a)p(a)}{(p'(a))^2}=0$$
+										$$\Leftrightarrow p'(a)=1-\frac{p''(a)p(a)}{(p'(a))^2}> 1$$
+										Notice that \(p(\cdot)\) is concave, so \(a\) is smaller than the first best.
+									</p>
+
+									<header>
+										<h2>The CARA-Normal Model</h2>
+									</header>
+									<p>
+										CARA means constant absolute risk aversion. Here we use the following setting:
+										$$q=a+\epsilon$$
+										$$\epsilon \sim N(0,\sigma^2)$$
+										Suppose that the principal is risk neutral, and the agent's utility function is:
+										$$u(w,a)=-e^{-r(w-g(a))}$$
+										where \(g(a)\) is increasing and convex:
+										$$g(a)=\frac{c}{2}a^2$$
+										Further assume linear (affine) contract:
+										$$w=\beta+\alpha q$$
+									</p>
+									<p>
+										To see absolute constant risk aversion, denote \(W\equiv w-g(a)\) as wealth. Then we have:
+										$$u(W)=-e^{-rW}$$
+										$$u'(W)=re^{-rW}$$
+										$$u''(W)=-r^2e^{-rW}$$
+										which gives:
+										$$-\frac{u''(W)}{u'(W)}=r$$
+										It is a constant, and it does not depend on \(W\).
+									</p>
+									<p>
+										One can show that if \(X\) is normally distributed, \(e^X\) is log-normally distributed. Moreover, if \(P\sim N(\theta, \sigma^2)\), then:
+										$$\mathbb{E}\left[e^{A+BP}\right]=e^{A+B\theta+\frac{B^2\sigma^2}{2}}$$
+										Note that \(q \sim N(a,\sigma^2)\), then we have:
+										$$\mathbb{E}\left[-e^{-r(w-g(a))}\right]=\mathbb{E}\left[-e^{-r(\beta+\alpha q-g(a))}\right]=-e^{-r(\beta+\alpha a-r\frac{\alpha^2}{2}\sigma^2-g(a))}$$
+										where
+										$$\beta+\alpha a-r\frac{\alpha^2}{2}\sigma^2-g(a)$$
+										is the certainty equivalent of the contract for the agent, with the risk premium \(r\frac{\alpha^2}{2}\sigma^2\).
+									</p>
+									<p>
+										Suppose that the agent's certainty equivalent is zero. Then, the agent's participation constraint stipulates that:
+										$$\beta+\alpha a -r\frac{\alpha^2}{2}\sigma^2-g(a)=0 \tag{IR}$$
+										Look into the incentive constraint:
+										$$\max_a -e^{-r(\beta+\alpha a-r\frac{\alpha^2}{2}\sigma^2-\frac{c}{2}a^2)}$$
+										The solution is equivalent to the solution of the following:
+										$$\max_{a} \left\{\beta+\alpha a-r\frac{\alpha^2}{2}\sigma^2-\frac{c}{2}a^2\right\}$$
+										Take FOC:
+										$$\alpha=ca \Leftrightarrow a=\frac{\alpha}{c}$$
+										If \(\alpha =1\), first best effort. To see this. solve the total surplus maximisation problem:
+										$$\max_{a} \left\{\beta+\alpha a -r\frac{\alpha^2}{2}\sigma^2-g(a)+a-\beta-\alpha a\right\}$$
+										Take FOC:
+										$$\alpha-g'(a)+1-\alpha \Leftrightarrow g'(a)=1 \Leftrightarrow ca=1$$
+									</p>
+									<p>
+										The principal maximises expected output:
+										$$\mathbb{E}[a-w]=a-\beta-\alpha a$$
+										Substituting in the \((\text{IR})\) and \((\text{IC})\) gives principal's problem:
+										$$\max_{a} \left\{\frac{\alpha}{c}-r\frac{\alpha^2}{2}\sigma^2-\frac{\alpha^2}{2c}\right\}$$
+										Take FOC:
+										$$\alpha=\frac{1}{1+rc\sigma^2}\in (0,1)$$
+										By comparative statics, we know that \(\alpha\) is decreasing in \(\sigma^2\). This means if the market is riskier, the contract should be less risky.
+									</p>
+									<header>
+										<h3>CARA: Step Contracts</h3>
+									</header>
+									<p>
+										Use the following payment scheme:
+										$$w=\begin{cases}w^*, \text{ if }q> \underline{q} \\K, \text{ otherwise}\end{cases}$$
+										where \(K\) is very low.
+									</p>
+									<p>
+										The density of the distribution of q is \(f(q|a)\), and suppose that the support is the real line. 
+									</p>
+									<p>
+										The agent's expected utility is:
+										$$\mathbb{E}[u(w)]-g(a)=\int_{-\infty}^{\infty} u(w(q))f(q|a)\mathrm{d}q-g(a)$$
+										By risk aversion of the agent and risk neutrality of the principal (principal should bear all the risk at the first best):
+										$$w^*(q)=w^*$$
+										Then, combine with the participation constraint we have the following in the first best:
+										$$\int_{-\infty}^{\infty} u(w(q))f(q|a)\mathrm{d}q=u(w^*)=g(a)$$
+									</p>
+									<p>
+										The agent's FOC for effort is:
+										$$\int_{-\infty}^{\underline{q}}u(K)f_a(q|a^*)\mathrm{d}q+\int_{\underline{q}}^{\infty}u(w^*)f_a(q|a^*)\mathrm{d}q=g'(a^*)$$
+										We can see that the agent's participation constraint is violated, at the first best:
+										$$u(w^*)-g(a^*)=0 \Leftrightarrow \int_{-\infty}^{\underline{q}}u(w^*)f(q|a^*)\mathrm{d}q+\int_{\underline{q}}^{\infty}u(w^*)f(q|a^*)\mathrm{d}q-g(a^*)=0$$
+										But, the expected payoff for the agent is:
+										$$\int_{-\infty}^{\underline{q}}u(K)f(q|a^*)\mathrm{d}q+\int_{\underline{q}}^{\infty}u(w^*)f(q|a^*)\mathrm{d}q-g(a^*)< 0$$
+										which is too little: \(K< w^*\).
+									</p>
+									<p>
+										We would like to know by how much the \((\text{IR})\) is violated:
+										$$\int_{-\infty}^{\underline{q}}(u(w^*)-u(K))f(q|a^*)\mathrm{d}q \tag{*}$$
+										Suppose that the distribution satisfies, note that the normal distribution satisfies:
+										$$\frac{\partial}{\partial q}\frac{f_a(q|a)}{f(q|a)}\geq 0$$
+										$$\lim_{q\rightarrow -\infty}\frac{f_a(q|a)}{f(q|a)}=-\infty$$
+										Hence, for any arbitrarily large \(M\), we can choose \(\underline{q}\) such that:
+										$$\frac{f_a(q|a)}{f(q|a)}< -M, \forall q<\underline{q}$$
+										Plug in \((*)\):
+										$$\int_{-\infty}^{\underline{q}}(u(w^*)-u(K))f(q|a^*)\mathrm{d}q< -\frac{1}{M}\int_{-\infty}^{\underline{q}}(u(w^*)-u(K))f_a(q|a^*)\mathrm{d}q$$
+										By IC constraint (FOR for effort):
+										$$\int_{-\infty}^{\underline{q}}(u(K)-u(w^*))f_a(q|a^*)\mathrm{d}q+\int_{-\infty}^{\infty}u(w^*)f_a(q|a^*)\mathrm{d}q=g'(a^*)$$
+										$$\Leftrightarrow \int_{-\infty}^{\underline{q}}(u(w^*)-u(K))f_a(q|a^*)\mathrm{d}=\int_{-\infty}^{\infty}u(w^*)f_a(q|a^*)\mathrm{d}q-g'(a^*)$$
+										Thus, the agent's IR constraint is violated by:
+										$$\int_{-\infty}^{\underline{q}}(u(w^*)-u(K))f(q|a^*)\mathrm{d}q< -\frac{1}{M}\left(\int_{-\infty}^{\infty}u(w^*)f_a(q|a^*)\mathrm{d}q-g'(a^*)\right)$$
+										The expression in brackets is finite and given. Choosing \(M\) large enough, the shortfall of the agent's expected utility goes to \(0\).
+									</p>
+									<header>
+										<h2>The First Order Approach</h2>
+									</header>
+									<p>
+										Linear contracts are generally not optimal and cannot be approximated by step contracts. One way to see how the optimal contracts looks like is the first order approach.
+									</p>
+									<header>
+										<h3>
+											Assumptions
+										</h3>
+									</header>
+									<p>
+										The principal's utility:
+										$$V(q-w)$$
+										with \(V'>0\) and \(V''\leq 0\).
+									</p>
+									<p>
+										The agent's utility:
+										$$u(w)-g(a)$$
+										with \(u'>0\), \(u''< 0\) and \(g'> 0\), \(g''\geq 0\).
+									</p>
+									<p>
+										\(q\) is output. Suppose that \(q\in[\underline{q}, \bar{q}]\) and that \(q\) follows a distribution with CDF \(F(q|a)\) and density \(f(q|a)\).
+									</p>
+									<header>
+										<h3>The Principal's Problem</h3>
+									</header>
+									<p>
+										$$\max_{w(q),a}\int_{\underline{q}}^{\bar{q}}V(q-w(q))f(q|a)\mathrm{d}q$$
+										subject to:
+										$$\int_{\underline{q}}^{\bar{q}}u(w(q))f(q|a)\mathrm{d}q-g(a) \geq \bar{u} \tag{IR}$$
+										$$a \in \arg\max_{\bar{a}\in A}\left\{\int^{\bar{q}}_{\underline{q}}u(w(q))f(q|\bar{a})\mathrm{d}q-g(\bar{a})\right\} \tag{IC}$$
+										We want to replace \((IC)\) by FOC and SOC:
+										$$\int^{\bar{q}}_{\underline{q}}u(w(q))f_a(q|a)\mathrm{d}q=g'(a)$$
+										$$\int^{\bar{q}}_{\underline{q}}u(w(q))f_{aa}(q|a)\mathrm{d}q-g''(a)< 0$$
+										But these are local conditions.
+									</p>
+									<header>
+										<h3>Claim</h3>
+									</header>
+									<p>
+										Under the following regularity conditions, the local conditions characterise a global optimum:
+										$$\frac{\partial}{\partial q}\frac{f_a(q|a)}{f(q|a)}\geq 0 \tag{MLRP}$$
+										$$F_{aa}(q|a)\geq 0\tag{CDFC}$$
+									</p>
+									<header>
+										<h4>Proof</h4>
+									</header>
+									<p>
+										S1: Write the Lagrangian:
+										$$\mathscr{L}=\int_{\underline{q}}^{\bar{q}}V(q-w(q))f(q|a)+\lambda u(w(q))f(q|a)+\mu u(w(q))f_a(q|a)\mathrm{d}q-\lambda g(a)-\mu g'(a)$$
+										Then take FOC w.r.t. \(w(q)\), by Envelope Theorem:
+										$$-V'(q-w(q))f(q|a)+\lambda u'(w(q))f(q|a)+\mu u'(w(q))f_a(q|a) \equiv 0$$
+										$$\Leftrightarrow \frac{V'(q-w(q))}{u'(w(q))}=\lambda+\mu\frac{f_a(q|a)}{f(q|a)} \tag{FOC}$$
+										The fraction in the rhs is the likelihood ratio. The lhs is increasing in \(w(q)\). How does the rhs varies with \(q\)? We want to know when does \(w'(q)\geq 0\). By \((\text{MLRP})\), we know the likelihood ratio is increasing in \(q\). We need to figure out the 
+										sign of \(\mu\).
+									</p>
+									<p>
+										Impose an assumption:
+										$$F_a(q|a)\leq 0 \tag{FOSD}$$
+										This is First Order Stochastic Dominance. If increase \(a\) (effort) slightly, the probability of output to be below some point is decreased. In other words, 
+										higher effort induces stochastically higher output.
+									</p>
+									<p>
+										S2: Show that \(\mu\) is positive. Note that this is the multiplier attached to the IC. <br>
+										Assume, by contradiction, \(\mu \leq0\). Take FOC of the principal's Lagrangian w.r.t. \(a\):
+										$$\int_{\underline{q}}^{\bar{q}}V(q-w(q))f_a(q|a)+\lambda [u(w(q))f_a(q|a)-g'(a)]+\mu [u(w(q))f_{aa}(q|a)-g''(a)]\mathrm{d}q\equiv 0$$
+										Note that the expression that \(\lambda\) is attached to is the FOC of IC, so it must be \(0\). Further, the expression that \(\mu\) is attached to is the SOC of IC, which is \(< 0 \).
+										$$\Leftrightarrow \int_{\underline{q}}^{\bar{q}}V(q-w(q))f_a(q|a)\mathrm{d}q=-\mu\left(\int_{\underline{q}}^{\bar{q}}u(w(q))f_{aa}(q|a)\mathrm{d}q-g''(a)\right) \leq 0 \tag{**}$$
+										The principal is harmed by an increasing effort.
+									</p>
+									<p>
+										Let \(w^{FB}(q)\) denotes the first best wage scheme, then:
+										$$V'(q-w^{FB}(q))=\lambda u'(w^{FB}(q))$$
+										Note that IC is not needed.
+										$$\Leftrightarrow \frac{V'(q-w^{FB}(q))}{u'(w^{FB}(q))}=\lambda \tag{FOCfb}$$
+										Compare \((\text{FOC})\) with \((\text{FOCfb})\). By \(\mu \leq 0\), if \(f_a(q|a)>0\), then we have:
+										$$\mu\frac{f_a(q|a)}{f(q|a)}\leq 0$$
+										Thus:
+										$$\frac{V'(q-w^{FB}(q))}{u'(w^{FB}(q))} \geq \frac{V'(q-w(q))}{u'(w(q))}$$
+										By \(u''< 0\), \(V'> 0\) and \(V''\leq 0\):
+										$$w(q)\leq w^{FB}(q)\Leftrightarrow V(q-w(q))\geq V(q-w^{FB}(q))$$
+										By a similar argument, if \(f_a(q|a)< 0\), then:
+										$$V(q-w(q))\leq V(q-w^{FB}(q))$$
+									</p>
+									<p>
+										Thus:
+										$$\int_{\underline{q}}^{\bar{q}}V(q-w(q))f_a(q|a)\mathrm{d}q \geq \int_{\underline{q}}^{\bar{q}}V(q-w^{FB}(q))f_a(q|a)\mathrm{d}q$$
+										If the rhs \(> 0\), then it contradicts with \((\text{**})\). To show this, first show \(0\leq w'^{FB}(q)\leq 1\). By \((\text{FOCfb})\):
+										$$V'(q-w^{FB}(q))=\lambda u'(w^{FB}(q))$$
+										Differentiating w.r.t. \(q\):
+										$$V''(\cdot)-V''(\cdot)w'^{FB}(q)=\lambda u''(w^{FB}(q))w'^{FB}(q)$$
+										$$\Leftrightarrow w'^{FB}(q)=\frac{V''(\cdot)}{V''(\cdot)+\lambda u''(\cdot)}$$
+										By \(0> V''(\cdot)> V''(\cdot)+\lambda u''(\cdot)\), we have:
+										$$w'^{FB}(q)< 1$$
+									</p>
+									<p>
+										Then, integrate by parts:
+										$$\int_{\underline{q}}^{\bar{q}}V(q-w^{FB}(q))f_a(q|a)\mathrm{d}q$$
+										$$=V(q-w^{FB}(q))F_a(q|a)\Bigg|_\underline{q}^\bar{q}-\int_{\underline{q}}^{\bar{q}}F_a(q|a)V'(\cdot)(1-w'^{FB}(q))\mathrm{d}q$$
+										$$=-\int_{\underline{q}}^{\bar{q}}V'(\cdot)(1-w'^{FB}(q))F_a(q|a)\mathrm{d}q>0 \unicode{x21af}$$
+										$$\Rightarrow \mu>0$$
+									</p>
+									<p>
+										S3: Show that \((\text{MLRP})\) implies \(w'(q)\geq 0\):
+										$$(\text{FOC}) \Leftrightarrow V'(q-w(q))=\left(\lambda+\mu\frac{f_a(q|a)}{f(q|a)}\right)u'(w(q))$$
+										Differentiating w.r.t. \(q\):
+										$$\Rightarrow V''(\cdot)-V''(\cdot)w'(q)=\left(\lambda+\mu\frac{f_a(q|a)}{f(q|a)}\right)u''(\cdot)w'(q)+\mu\frac{\partial}{\partial q}\frac{f_a(q|a)}{f(q|a)}u'(\cdot)$$
+										Then we can get \(w'(q)\):
+										$$\Leftrightarrow \left[\left(\lambda+\mu\frac{f_a(q|a)}{f(q|a)}\right)u''(\cdot)+V''(\cdot)\right]w'(q)=V''(\cdot)-\mu\frac{\partial}{\partial q}\frac{f_a(q|a)}{f(q|a)}u'(\cdot)$$
+										$$\Leftrightarrow w'(q)=\frac{V''(\cdot)-\mu u'(\cdot)\frac{\partial}{\partial q}\frac{f_a(q|a)}{f(q|a)}}{V''(\cdot)+\left(\lambda+\mu\frac{f_a(q|a)}{f(q|a)}\right)u''(\cdot)}\geq 0$$
+									</p>
+									<p>
+										S4: Show that the local conditions always characterises the optimum of the agent's problem if \((\text{CDFC})\) holds in addition to \((\text{MLRP})\). <br>
+										Agent's problem ((IC) and (IR), gross expected utility) :
+										$$\int^{\bar{q}}_{\underline{q}}u(w(q))f(q|a)\mathrm{d}q$$
+										Integration by parts:
+										$$=u(w(q))F(q|a)\Bigg|^\bar{q}_\underline{q}-\int_\underline{q}^\bar{q}u'(w(q))w'(q)F(q|a)\mathrm{d}q$$
+										$$=u(w(\bar{q}))-\int_\bar{q}^\underline{q} u'(w(q))w'(q)F(q|a)\mathrm{d}q \tag{***}$$
+									</p>
+									<p>
+										Since \(w'(q)\geq 0\), by \((\text{FOSD})\), we know that \((***)\) is non-decreasing in \(a\). Moreover, by \((\text{CDFC})\), we conclude that \((***)\) is concave in \(a\).
+									</p>
+									<p>
+										Thus, When the distribution of output satisfies \((\text{MLRP})\) and \((\text{CDFC})\), local conditions characterises a global optimum.
+									</p>
+									<p>
+										See application in the slides.
+									</p>
+								</div>
+
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+				<section id="contact">
+					<div class="inner">
+						<section>
+							<div class="contact-method">
+								<span class="icon solid alt fa-envelope"></span>
+								<h3>Email</h3>
+								<a href="mailto:jiawei.zhang@uni-bonn.de">jiawei.zhang@uni-bonn.de</a>
+							</div>
+						</section>
+						<section class="split">
+							<section>
+								<ul class="icons">
+									<li><a href="https://github.com/jiaweicheung" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/jiawei-zhang-64752b149/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Jiawei Zhang</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	</body>
+</html>
